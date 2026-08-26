@@ -10,10 +10,10 @@
   "rules/three_option_ideation.md": "Forbids unilateral decisions; the agent must present 3 distinct choices.",
   "rules/token_conservation.md": "Strips out AI conversational filler and forces targeted file edits to save you money.",
   
-  "motivation/hype_man.md": "Drops the robotic AI tone to aggressively hype you up after you fix a nasty bug.",
-  "motivation/anti_burnout.md": "If you're stuck, the agent refuses to give you code and orders you to take a walk.",
-  "motivation/gamification.md": "Awards you XP and levels up your stats when you complete tasks.",
-  "motivation/small_wins.md": "Interrupts you when overwhelmed to remind you of the foundation you've built.",
+  "rules/hype_man.md": "Drops the robotic AI tone to aggressively hype you up after you fix a nasty bug.",
+  "rules/anti_burnout.md": "If you're stuck, the agent refuses to give you code and orders you to take a walk.",
+  "rules/gamification.md": "Awards you XP and levels up your stats when you complete tasks.",
+  "rules/small_wins.md": "Interrupts you when overwhelmed to remind you of the foundation you've built.",
   
   "subagents/concept_artist.md": "The Mockup Generator. Creates 3 visual UI concepts before coding.",
   "subagents/vibe_translator.md": "The Technical Producer. Translates aesthetic ideas into React/Tailwind specs.",

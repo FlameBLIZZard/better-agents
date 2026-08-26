@@ -11,14 +11,13 @@ function countFiles(dirPath) {
 }
 
 // Get counts
-const psychologyRules = countFiles(path.join(agentsDir, 'motivation'));
 const subagents = countFiles(path.join(agentsDir, 'subagents'));
 const coreRules = countFiles(path.join(agentsDir, 'rules')); // Now rules/ only has core rules
 const skills = fs.readdirSync(path.join(agentsDir, 'skills')).length; // Counting folders in skills
 const workflows = countFiles(path.join(agentsDir, 'workflows'));
 const hooks = countFiles(path.join(agentsDir, 'scripts')) + 1; // +1 for hooks.json
 
-const total = coreRules + skills + subagents + psychologyRules + hooks + workflows;
+const total = coreRules + skills + subagents + hooks + workflows;
 
 const newSection = `<!-- STATS:START -->
 ## 📊 The Arsenal (${total} Modules & Counting)
@@ -28,7 +27,6 @@ pie title The Agentic Toolkit Breakdown
     "Core Rules" : ${coreRules}
     "Advanced Skills" : ${skills}
     "Subagents" : ${subagents}
-    "Psychology Rules" : ${psychologyRules}
     "Lifecycle Hooks" : ${hooks}
     "Workflows" : ${workflows}
 \`\`\`

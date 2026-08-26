@@ -56,39 +56,17 @@ async function runCLI() {
     selectedFiles.push(...res);
   }
 
-  // 2. Motivation Rules
-  const motivationDir = path.join(agentsDir, 'motivation');
-  const motivationFiles = fs.readdirSync(motivationDir).filter(f => f.endsWith('.md'));
-  const motivationOptions = motivationFiles.map(file => ({
-    value: `motivation/${file}`,
-    label: formatLabel(file),
-    hint: extractHint(`motivation/${file}`)
-  }));
-
-  const selectedMotivation = await multiselect({
-    message: 'Select Motivation & Psychology Rules:',
-    options: motivationOptions,
-    required: false
-  });
-  if (isCancel(selectedMotivation)) { cancel('Operation cancelled.'); process.exit(0); }
-  selectedFiles.push(...selectedMotivation);
-
-  // 3. Subagents
-  const subagentsDir = path.join(agentsDir, 'subagents');
-  const subagentFiles = fs.readdirSync(subagentsDir).filter(f => f.endsWith('.md'));
-  const subagentOptions = subagentFiles.map(file => ({
-    value: `subagents/${file}`,
-    label: formatLabel(file),
-    hint: extractHint(`subagents/${file}`)
-  }));
-
-  const selectedSubagents = await multiselect({
-    message: 'Select Subagents:',
-    options: subagentOptions,
-    required: false
-  });
-  if (isCancel(selectedSubagents)) { cancel('Operation cancelled.'); process.exit(0); }
-  selectedFiles.push(...selectedSubagents);
+  // 2. Subagents
+  const subagents = getOptionsFromDir('subagents');
+  if (subagents.length > 0) {
+    const res = await multiselect({
+      message: 'Select Subagents:',
+      options: subagents,
+      required: false
+    });
+    if (isCancel(res)) { cancel('Operation cancelled.'); process.exit(0); }
+    selectedFiles.push(...res);
+  }
 
   // 4. Skills (Folders)
   const skills = getOptionsFromDir('skills', true);
