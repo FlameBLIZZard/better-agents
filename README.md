@@ -51,23 +51,23 @@ The wizard will magically compile your selected rules directly into your project
 
 Why write code when you can direct? Meet your new specialized cast of AI subagents. 
 
-### 🎨 `@concept-artist` (The Mockup Generator)
-Generates 3 visual UI concepts before a single line of code is written.
+### 🎨 `@concept-artist` (UI/UX Prototyper)
+Generates structural wireframes and visual concepts prior to implementation.
 
-### 🧠 `@spec-translator` (The Technical Producer)
-Translates abstract aesthetic ideas (e.g., "cyberpunk cafe") into strict technical React/Tailwind specs.
+### 🚀 `@autopilot` (Autonomous Developer)
+Executes comprehensive implementation specs with zero human intervention.
 
-### 🚀 `@autopilot` (The Head Developer)
-Takes a spec and silently grinds in the background to build the entire MVP without lecturing you.
+### 🧽 `@silent-fixer` (Automated Debugger)
+Analyzes stack traces and applies targeted patches without conversational overhead.
 
-### 🧽 `@silent-fixer` (The Bug Janitor)
-Paste a stack trace, and it patches the code without explaining anything. *"Fixed. Refresh."*
+### 🎨 `@design-translator` (Design Systems Engineer)
+Translates abstract design requirements into strict technical specifications.
 
-### 🪄 `@readme-wizard` (The Open Source Marketer)
-Writes world-class, visually stunning READMEs with dynamic banners and shields.io badges.
+### 🪄 `@documentation-engineer` (Documentation Engineer)
+Synthesizes codebase context into comprehensive, production-ready documentation.
 
-### ✨ `@quality-check` (The Art Critic)
-QA agent that strictly reviews frontend code for padding, styling, and UI consistency.
+### ✨ `@ui-qa-engineer` (Frontend QA)
+Enforces strict UI/UX consistency, spacing constraints, and component styling standards.
 
 ---
 
