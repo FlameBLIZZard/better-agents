@@ -60,6 +60,9 @@ Executes comprehensive implementation specs with zero human intervention.
 ### 🧽 `@silent-fixer` (Automated Debugger)
 Analyzes stack traces and applies targeted patches without conversational overhead.
 
+### 🏗️ `@system-architect` (Infrastructure Lead)
+Designs and scaffolds highly scalable, strictly boundaried folder hierarchies.
+
 ### 🕵️ `@market-researcher` (Product Strategist)
 Scours developer forums and internet communities for validated pain points before you write a single line of code.
 
@@ -78,13 +81,13 @@ Enforces strict UI/UX consistency, spacing constraints, and component styling st
 ---
 
 <!-- STATS:START -->
-## 📊 The Arsenal (38 Modules & Counting)
+## 📊 The Arsenal (40 Modules & Counting)
 
 ```mermaid
 pie title The Agentic Toolkit Breakdown
     "Core Rules" : 16
-    "Advanced Skills" : 9
-    "Subagents" : 8
+    "Advanced Skills" : 10
+    "Subagents" : 9
     "Lifecycle Hooks" : 4
     "Workflows" : 1
 ```
