@@ -71,6 +71,20 @@ QA agent that strictly reviews frontend code for padding, styling, and UI consis
 
 ---
 
+## 📊 The Arsenal (32 Modules & Counting)
+
+```mermaid
+pie title The Agentic Toolkit Breakdown
+    "Core Rules" : 11
+    "Advanced Skills" : 7
+    "Subagents" : 6
+    "Psychology Rules" : 4
+    "Lifecycle Hooks" : 3
+    "Workflows" : 1
+```
+
+---
+
 ## 📦 What Else is in the Box?
 
 <details>
