@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200" width="800" height="200">
+  <defs>
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#38bdf8;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#c026d3;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <rect width="800" height="200" rx="10" ry="10" fill="#0f172a" />
+  
+  <rect x="40" y="60" width="100" height="80" rx="10" fill="#1e293b" stroke="#38bdf8" stroke-width="2"/>
+  <text x="90" y="105" fill="white" font-family="sans-serif" font-weight="bold" font-size="16" text-anchor="middle">You</text>
+  
+  <text x="170" y="105" fill="#64748b" font-family="sans-serif" font-size="24" text-anchor="middle">➔</text>
+  
+  <rect x="200" y="60" width="160" height="80" rx="10" fill="#1e293b" stroke="url(#grad1)" stroke-width="3"/>
+  <text x="280" y="95" fill="white" font-family="sans-serif" font-weight="bold" font-size="16" text-anchor="middle">CLI Installer</text>
+  <text x="280" y="115" fill="#94a3b8" font-family="monospace" font-size="12" text-anchor="middle">npx github:...</text>
+  
+  <text x="390" y="105" fill="#64748b" font-family="sans-serif" font-size="24" text-anchor="middle">➔</text>
+  
+  <rect x="420" y="60" width="160" height="80" rx="10" fill="#1e293b" stroke="#22c55e" stroke-width="2"/>
+  <text x="500" y="95" fill="white" font-family="sans-serif" font-weight="bold" font-size="16" text-anchor="middle">AI Workspace</text>
+  <text x="500" y="115" fill="#94a3b8" font-family="monospace" font-size="12" text-anchor="middle">Antigravity / Cursor</text>
+  
+  <text x="610" y="105" fill="#64748b" font-family="sans-serif" font-size="24" text-anchor="middle">➔</text>
+  
+  <rect x="640" y="60" width="120" height="80" rx="10" fill="#1e293b" stroke="#eab308" stroke-width="2"/>
+  <text x="700" y="95" fill="white" font-family="sans-serif" font-size="16" font-weight="bold" text-anchor="middle">Magic</text>
+  <text x="700" y="115" fill="#94a3b8" font-family="monospace" font-size="12" text-anchor="middle">Hooks &amp; Agents</text>
+</svg>

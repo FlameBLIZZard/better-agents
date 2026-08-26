@@ -12,13 +12,21 @@
 
 > Stop treating your AI like a glorified search engine. Treat it like a **Production Studio**.
 
-*Better Agents* transforms your workspace into an autonomous ecosystem where you act as the **Creative Director**, and the AI handles the boilerplate. This is an ever-growing, limitless collection of modular rules, psychology-driven motivation loops, and autonomous subagents natively designed to protect your context window and maximize pure vibes.
+*Better Agents* transforms your workspace into an autonomous ecosystem where you act as the **Creative Director**, and the AI handles the boilerplate. 
+
+<p align="center">
+  <img src="./assets/flowchart.svg" alt="Architecture Flowchart" width="800">
+</p>
 
 ---
 
 ## 🚀 How to Install (Universal CLI)
 
 You don't need to manually clone or copy any folders! Just run our stunning interactive CLI directly from your terminal:
+
+<p align="center">
+  <img src="./assets/terminal.svg" alt="CLI Terminal Animation" width="800">
+</p>
 
 ```bash
 npx github:FlameBLIZZard/better-agents
