@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=000000&height=250&section=header&text=Better%20Agents&fontSize=80&fontColor=ffffff&animation=fadeIn&fontAlignY=30&desc=The%20Ultimate%20AI%20Agent%20Toolkit&descAlignY=60&descAlign=50&descTheme=ffffff" alt="Better Agents Banner" />
+  <img src="./assets/banner.svg" alt="Better Agents Banner" width="1000" />
 </p>
 
 <p align="center">
