@@ -26,18 +26,6 @@ async function compileCursor(selectedFiles, targetDir, targetName) {
   let compiledContent = `# Better Agents - Unified Instructions\n\n`;
   let fileCount = 0;
 
-  // Slash Command Router logic
-  if (selectedFiles.includes('slash_commands.json')) {
-    const slashRegistry = JSON.parse(fs.readFileSync(path.join(sourceBase, 'slash_commands.json'), 'utf-8'));
-    compiledContent += `## 🚀 SLASH COMMAND ROUTER\n`;
-    compiledContent += `CRITICAL INSTRUCTION: If the user's prompt begins with any of the following slash commands, you MUST immediately halt standard operations and execute the associated protocol strictly.\n\n`;
-    
-    for (const [cmd, data] of Object.entries(slashRegistry)) {
-      compiledContent += `- **${cmd}**: Executes \`${data.file}\` (${data.description})\n`;
-    }
-    compiledContent += `\n---\n`;
-  }
-
   for (const relPath of selectedFiles) {
     // Skip hooks/scripts because Cursor doesn't support them
     if (relPath.endsWith('.json') || relPath.endsWith('.js')) continue;
