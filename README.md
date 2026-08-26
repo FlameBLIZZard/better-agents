@@ -1,15 +1,16 @@
 # Better Agents
 
-A collection of optimized, modular rules for Antigravity AI agents to make them more efficient, thorough, and user-friendly.
+An ever-growing, limitless collection of optimized, modular rules and skills for Antigravity AI agents. This repository is continuously evolving to make agents more efficient, thorough, and user-friendly.
 
-## Features
+## 🌟 Current Features
 
-These rules enforce three main behaviors:
+Our toolkit currently includes the following rules (with many more rules and skills to come!):
+
 1. **Interactive Planning (`project_alignment.md`):** Forces the agent to pause and interview you (`/grill-me`) before scaffolding new projects to ensure architecture and requirements are aligned.
 2. **Beginner-Friendly Documentation (`beginner_documentation.md`):** Automatically generates a comprehensive `PROJECT_TOUR.md` for every new project, explaining the architecture and tech stack in simple, real-world analogies.
 3. **Strict Token Conservation (`token_conservation.md`):** Strips out AI conversational filler (e.g., "Here is your code", apologies), prevents unnecessary code echoing, and forces targeted file edits to save context window space and costs. It intelligently bypasses this rule when explaining concepts or writing the documentation file.
 
-## How to Install
+## 🚀 How to Install
 
 Antigravity natively supports discovering modular rules placed in the `.agents/rules/` directory.
 
@@ -20,3 +21,6 @@ To apply these rules to **all** projects on your machine, copy the `.agents/rule
 
 ### 2. Project-Specific Installation
 To apply these rules to a single project, simply copy the `.agents/` folder into the root of your project directory. The agent will automatically discover the modular rules when working in that project.
+
+## 🤝 Contributing
+Because this repository is constantly growing, feel free to contribute your own favorite rules and skills to help the community build better agents!
