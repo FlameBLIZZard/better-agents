@@ -1,4 +1,4 @@
-const { intro, outro, select, multiselect, spinner } = require('@clack/prompts');
+const { intro, outro, select, multiselect, spinner, isCancel, cancel } = require('@clack/prompts');
 const pc = require('picocolors');
 const path = require('path');
 const fs = require('fs-extra');
@@ -63,7 +63,7 @@ async function runCLI() {
       options: coreRules,
       required: false
     });
-    if (res === Symbol.for('cancel')) process.exit(0);
+    if (isCancel(res)) { cancel('Operation cancelled.'); process.exit(0); }
     selectedFiles.push(...res);
   }
 
@@ -75,7 +75,7 @@ async function runCLI() {
       options: motivationRules,
       required: false
     });
-    if (res === Symbol.for('cancel')) process.exit(0);
+    if (isCancel(res)) { cancel('Operation cancelled.'); process.exit(0); }
     selectedFiles.push(...res);
   }
 
@@ -87,7 +87,7 @@ async function runCLI() {
       options: subagents,
       required: false
     });
-    if (res === Symbol.for('cancel')) process.exit(0);
+    if (isCancel(res)) { cancel('Operation cancelled.'); process.exit(0); }
     selectedFiles.push(...res);
   }
 
@@ -99,7 +99,7 @@ async function runCLI() {
       options: skills,
       required: false
     });
-    if (res === Symbol.for('cancel')) process.exit(0);
+    if (isCancel(res)) { cancel('Operation cancelled.'); process.exit(0); }
     selectedFiles.push(...res);
   }
 
@@ -111,7 +111,7 @@ async function runCLI() {
       { value: false, label: 'No' }
     ]
   });
-  if (hooks === Symbol.for('cancel')) process.exit(0);
+  if (isCancel(hooks)) { cancel('Operation cancelled.'); process.exit(0); }
   if (hooks) {
     selectedFiles.push('hooks.json');
     selectedFiles.push('scripts/time_machine.js');
@@ -132,7 +132,7 @@ async function runCLI() {
     ]
   });
 
-  if (aiTarget === Symbol.for('cancel')) { process.exit(0); }
+  if (isCancel(aiTarget)) { cancel('Operation cancelled.'); process.exit(0); }
 
   const s = spinner();
   s.start(`Compiling your customized toolkit for ${aiTarget}...`);
