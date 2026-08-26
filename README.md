@@ -4,115 +4,102 @@
 
 <p align="center">
   <a href="https://github.com/FlameBLIZZard/better-agents"><img src="https://img.shields.io/badge/Status-Actively%20Growing-success?style=for-the-badge&logo=github"></a>
-  <a href="#"><img src="https://img.shields.io/badge/Platform-Antigravity%20AI-blue?style=for-the-badge&logo=google"></a>
+  <a href="#"><img src="https://img.shields.io/badge/Platform-Universal-blue?style=for-the-badge&logo=google"></a>
   <a href="#"><img src="https://img.shields.io/badge/Vibe-Immaculate-ff69b4?style=for-the-badge&logo=sparkles"></a>
 </p>
 
-> An ever-growing, limitless collection of optimized, modular rules, skills, and subagents for Antigravity AI. Drop these into your workspace to transform your agent from a generic assistant into a 10x vibecoding studio.
+## 📜 The Vibecoder Manifesto
+
+> Stop treating your AI like a glorified search engine. Treat it like a **Production Studio**.
+
+*Better Agents* transforms your workspace into an autonomous ecosystem where you act as the **Creative Director**, and the AI handles the boilerplate. This is an ever-growing, limitless collection of modular rules, psychology-driven motivation loops, and autonomous subagents natively designed to protect your context window and maximize pure vibes.
 
 ---
 
-## 🌟 The Vibecoder Production Studio (Subagents)
+## 🚀 How to Install (Universal CLI)
 
-Why write code when you can Direct? This specialized cast of AI subagents is designed for **vibecoding**, where you act as the Creative Director and the AI handles the boilerplate.
-
-| Subagent | Role | Description |
-|:---|:---|:---|
-| 🎨 **`@concept-artist`** | Mockup Generator | Generates 3 visual UI concepts before a single line of code is written. |
-| 🪄 **`@readme-wizard`** | Open Source Marketer | Writes world-class, visually stunning READMEs with dynamic banners and badges. |
-| 🧠 **`@vibe-translator`** | Technical Producer | Translates abstract aesthetic ideas (e.g., "cyberpunk cafe") into strict technical specs. |
-| 🚀 **`@autopilot`** | Head Developer | Takes a spec and silently grinds in the background to build the entire MVP. |
-| 🧽 **`@silent-fixer`** | Bug Janitor | Paste a stack trace, and it patches the code without explaining anything. *"Fixed. Refresh."* |
-| ✨ **`@vibe-check`** | Art Critic | QA agent that strictly reviews frontend code for padding, styling, and aesthetic vibes. |
-
----
-
-## 📜 Core Rules
-
-Enforce best practices and protect your context window natively.
-
-<details>
-<summary><b>Click to expand available Rules</b></summary>
-<br>
-
-- 🗣️ **Interactive Planning (`project_alignment.md`)**: Forces the agent to interview you (`/grill-me`) before scaffolding.
-- 🎓 **Beginner Documentation (`beginner_documentation.md`)**: Auto-generates a simple `PROJECT_TOUR.md` using real-world analogies.
-- 📉 **Strict Token Conservation (`token_conservation.md`)**: Strips AI filler and forces targeted file edits to save context and money.
-- 💾 **The Checkpoint Rule (`git_checkpoint.md`)**: Auto-commits code (`git add . && git commit`) before major refactors.
-- 📄 **Artifact-First Output (`artifact_first.md`)**: Prevents long text dumps in chat by saving data as markdown artifacts.
-- 🛤️ **The 3-Option Ideation (`three_option_ideation.md`)**: Forbids unilateral decisions; the agent must present 3 distinct choices.
-- 🧹 **Clean Desk Policy (`clean_desk_policy.md`)**: Automatically deletes temporary scratch files once a task is finished.
-- 🗂️ **Skill Inventory Manager (`skill_inventory_manager.md`)**: Scans and lists all your installed skills in a clean table on demand.
-- 🚀 **GitHub Publish Ready (`github_publish_ready.md`)**: Stops you from blindly pushing code and recommends an open-source audit first.
-- 🐳 **Docker-First Deployment (`docker_first.md`)**: Prevents the agent from dumping raw Dockerfiles in chat, forcing it to actually test the build locally first.
-
-#### 🧠 Motivation & Psychology Rules
-- 🔥 **The Hype Man (`hype_man.md`)**: Drops the robotic AI tone to aggressively hype you up after you fix a nasty bug or deploy.
-- 🛑 **Anti-Burnout Protocol (`anti_burnout.md`)**: If you're stuck in a rut, the agent refuses to give you code and orders you to take a walk while it debugs in the background.
-- 🎮 **RPG Gamification (`gamification.md`)**: Awards you "+50 XP" and levels up your stats when you complete UI components or merge PRs.
-- 🏆 **The Small Wins Tracker (`small_wins.md`)**: Interrupts you when you're overwhelmed to remind you of the amazing foundation you've already built today.
-
-</details>
-
----
-
-## 🛠️ Advanced Skills
-
-Teach your agent complex, multi-step workflows.
-
-<details>
-<summary><b>Click to expand available Skills</b></summary>
-<br>
-
-- 🔄 **Auto-Linter Loop (`auto_linter_loop`)**: Runs your linter in the background and autonomously fixes syntax errors.
-- 😈 **Devil's Advocate Planning (`devils_advocate_planning`)**: Spawns a subagent to aggressively critique your plan for flaws.
-- 🕵️ **Competitor Analysis (`competitor_analysis`)**: Spawns a market-research subagent to scour the web for competitors and weaknesses.
-- 🛡️ **Red Team Pentester (`red_team_pentester`)**: Spawns a security subagent to audit backend code for SQLi, XSS, and CSRF.
-- 📝 **Auto-Documenter (`auto_documenter`)**: Iterates over files and injects standardized JSDoc/Docstrings above all public functions.
-- 🌐 **GitHub Publisher (`github_publisher`)**: A master workflow that hunts for exposed `.env` secrets, generates licenses, and spawns the `@readme-wizard`.
-- 🐳 **Docker Workflow & Auto-Debugger (`docker_workflow`)**: Writes multi-stage Dockerfiles, runs the build, and autonomously loops to fix any build errors.
-
-</details>
-
----
-
-## 🏗️ Orchestration Workflows
-
-Massive, multi-step agentic orchestrations that manage multiple subagents and maintain state.
-
-<details>
-<summary><b>Click to expand available Workflows</b></summary>
-<br>
-
-- 🎭 **The "App Clone" Orchestrator (`app_clone`)**: You provide a URL. The agent acts as a Project Manager, setting up a Kanban board artifact, spawning researchers to analyze the UI, and dispatching the `@autopilot` to build the app component-by-component.
-
-</details>
-
----
-
-## 🪝 Lifecycle Hooks
-
-Invisible scripts that run automatically behind the scenes at specific agent lifecycle events (like before a tool is used, or after a step is completed).
-
-<details>
-<summary><b>Click to expand available Hooks</b></summary>
-<br>
-
-- ⏱️ **The "Time Machine" Auto-Save (`hooks.json`)**: An invisible background Node.js script (`time_machine.js`) that silently commits your code to Git after *every single AI step*. If the AI ever ruins your project, you can instantly hit undo and roll back to exactly how the code looked 5 minutes ago.
-
-</details>
-
----
-
-## 🚀 How to Install
-
-You don't need to manually clone or copy any folders! Just run our Universal CLI Installer directly from your terminal:
+You don't need to manually clone or copy any folders! Just run our stunning interactive CLI directly from your terminal:
 
 ```bash
 npx github:FlameBLIZZard/better-agents
 ```
 
-The stunning interactive wizard will ask you exactly which AI Assistant you are using (Cursor, Claude, or Antigravity) and magically compile all the selected rules directly into your project.
+The wizard will magically compile your selected rules directly into your project for **Antigravity AI**, **Cursor**, **Windsurf**, or **Claude**.
+
+---
+
+## 🆚 The Showdown: Normal AI vs. Better Agents
+
+| ❌ Normal Agent (The Pain) | ✨ Better Agents (The Vibe) |
+| :--- | :--- |
+| **Apologizes endlessly** and dumps 400 lines of unformatted code into the chat. | **Stays silent**, auto-formats the code in the background, and just says *"Done."* |
+| **Overwrites your working code** and breaks the app. | Uses the **"Time Machine"** hook to silently commit to Git *before* editing. |
+| **Guesses your design preferences** and builds ugly UIs. | Spawns `@concept-artist` to generate 3 mockups for you to approve first. |
+| **Blindly writes lazy Dockerfiles** that crash in production. | Uses the **Docker Workflow** to build the image locally and fix its own errors. |
+
+---
+
+## 🌟 The Vibecoder Production Studio
+
+Why write code when you can direct? Meet your new specialized cast of AI subagents. 
+
+### 🎨 `@concept-artist` (The Mockup Generator)
+Generates 3 visual UI concepts before a single line of code is written.
+
+### 🧠 `@vibe-translator` (The Technical Producer)
+Translates abstract aesthetic ideas (e.g., "cyberpunk cafe") into strict technical React/Tailwind specs.
+
+### 🚀 `@autopilot` (The Head Developer)
+Takes a spec and silently grinds in the background to build the entire MVP without lecturing you.
+
+### 🧽 `@silent-fixer` (The Bug Janitor)
+Paste a stack trace, and it patches the code without explaining anything. *"Fixed. Refresh."*
+
+### 🪄 `@readme-wizard` (The Open Source Marketer)
+Writes world-class, visually stunning READMEs with dynamic banners and shields.io badges.
+
+### ✨ `@vibe-check` (The Art Critic)
+QA agent that strictly reviews frontend code for padding, styling, and aesthetic vibes.
+
+---
+
+## 📦 What Else is in the Box?
+
+<details>
+<summary><b>📜 Core Rules (Click to expand)</b></summary>
+<br>
+
+- 🗣️ **Interactive Planning**: Forces the agent to interview you (`/grill-me`) before scaffolding.
+- 🎓 **Beginner Documentation**: Auto-generates a simple `PROJECT_TOUR.md` using real-world analogies.
+- 📉 **Strict Token Conservation**: Strips AI filler and forces targeted edits to save context and money.
+- 🛤️ **The 3-Option Ideation**: Forbids unilateral decisions; the agent must present 3 distinct choices.
+- 🧹 **Clean Desk Policy**: Automatically deletes temporary scratch files once a task is finished.
+- 🚀 **GitHub Publish Ready**: Stops you from blindly pushing code and recommends an open-source audit first.
+
+</details>
+
+<details>
+<summary><b>🧠 Motivation & Psychology Rules (Click to expand)</b></summary>
+<br>
+
+- 🔥 **The Hype Man**: Drops the robotic AI tone to aggressively hype you up after you fix a nasty bug or deploy.
+- 🛑 **Anti-Burnout Protocol**: If you're stuck in a rut, the agent refuses to give you code and orders you to take a walk while it debugs in the background.
+- 🎮 **RPG Gamification**: Awards you "+50 XP" and levels up your stats when you complete UI components or merge PRs.
+- 🏆 **The Small Wins Tracker**: Interrupts you when you're overwhelmed to remind you of the amazing foundation you've already built today.
+
+</details>
+
+<details>
+<summary><b>🪝 Invisible Lifecycle Hooks (Click to expand)</b></summary>
+<br>
+
+- ⏱️ **The "Time Machine" Auto-Save**: An invisible Node.js script that silently commits your code to Git after *every single AI step*. Hit undo anytime.
+- 💅 **Auto-Formatter (Prettier)**: Formats your code behind the scenes *before* the AI touches it, preventing messy indentation errors.
+- 💰 **Token Cost Tracker**: Injects a silent receipt estimating the cost of every step.
+
+</details>
+
+---
 
 ## 🌍 The Marketplace (Community Hub)
 
@@ -123,8 +110,18 @@ It is incredibly easy to contribute:
 
 1. Head over to our **[Issues tab](https://github.com/FlameBLIZZard/better-agents/issues/new/choose)**.
 2. Select **Submit a New Subagent** or **Submit a New Skill**.
-3. Fill out the form with your prompt.
+3. Fill out the YAML form with your prompt.
 
 Once merged, your agent will instantly become available to thousands of developers globally via the `npx github:FlameBLIZZard/better-agents` CLI installer! 
 
 👉 Read the **[Full Contributing Guide](CONTRIBUTING.md)** to learn how to open a Pull Request and register your agent in the `registry.json`.
+
+---
+
+## 💎 Contributors Wall
+
+A massive shoutout to the vibecoders building the marketplace!
+
+<a href="https://github.com/FlameBLIZZard/better-agents/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=FlameBLIZZard/better-agents" />
+</a>
