@@ -2,14 +2,20 @@ const fs = require('fs-extra');
 const path = require('path');
 const pc = require('picocolors');
 
-async function compileAntigravity(selections, targetDir) {
-  const sourceDir = path.join(__dirname, '../../.agents');
-  const destDir = path.join(targetDir, '.agents');
+async function compileAntigravity(selectedFiles, targetDir) {
+  const sourceBase = path.join(__dirname, '../../.agents');
+  const destBase = path.join(targetDir, '.agents');
 
-  // Copy everything for now (in a real app, we'd filter by selections)
-  await fs.copy(sourceDir, destDir);
+  for (const relPath of selectedFiles) {
+    const srcPath = path.join(sourceBase, relPath);
+    const destPath = path.join(destBase, relPath);
+    
+    if (fs.existsSync(srcPath)) {
+      await fs.copy(srcPath, destPath);
+    }
+  }
   
-  console.log(pc.green(`\n✔ Successfully installed modular .agents folder into ${targetDir}`));
+  console.log(pc.green(`\n✔ Successfully installed ${selectedFiles.length} customized modules into ${targetDir}`));
   console.log(pc.cyan(`\nAntigravity will automatically load these rules next time you open the workspace!`));
 }
 

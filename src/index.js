@@ -1,30 +1,108 @@
 const { intro, outro, select, multiselect, spinner } = require('@clack/prompts');
 const pc = require('picocolors');
 const path = require('path');
+const fs = require('fs-extra');
 const { compileAntigravity } = require('./compilers/antigravity');
 const { compileCursor } = require('./compilers/cursor');
 const { compileClaude } = require('./compilers/claude');
 
+// Helper to dynamically read directories
+function getOptionsFromDir(dirRelPath, isDirectoryMode = false) {
+  const fullPath = path.join(__dirname, '../../.agents', dirRelPath);
+  if (!fs.existsSync(fullPath)) return [];
+  
+  const items = fs.readdirSync(fullPath);
+  const options = [];
+
+  for (const item of items) {
+    const itemPath = path.join(fullPath, item);
+    const stat = fs.statSync(itemPath);
+    
+    if (isDirectoryMode && stat.isDirectory()) {
+      options.push({ value: path.posix.join(dirRelPath, item), label: item });
+    } else if (!isDirectoryMode && stat.isFile() && item.endsWith('.md')) {
+      options.push({ value: path.posix.join(dirRelPath, item), label: item.replace('.md', '') });
+    }
+  }
+  return options;
+}
+
 async function runCLI() {
   intro(pc.bgMagenta(pc.black(' Better Agents - Universal Installer ')));
 
-  const features = await multiselect({
-    message: 'Which modules do you want to install?',
-    options: [
-      { value: 'core', label: 'Core Best Practices', hint: 'recommended' },
-      { value: 'subagents', label: 'Vibecoder Subagents' },
-      { value: 'workflows', label: 'Agentic Workflows' },
-      { value: 'motivation', label: 'Motivation & Psychology Suite' },
-    ],
-    required: true
-  });
+  const selectedFiles = [];
 
-  if (features === Symbol.for('cancel')) { process.exit(0); }
+  // 1. Core Rules
+  const coreRules = getOptionsFromDir('rules');
+  if (coreRules.length > 0) {
+    const res = await multiselect({
+      message: 'Select Core Rules:',
+      options: coreRules,
+      required: false
+    });
+    if (res === Symbol.for('cancel')) process.exit(0);
+    selectedFiles.push(...res);
+  }
+
+  // 2. Motivation Rules
+  const motivationRules = getOptionsFromDir('rules/motivation');
+  if (motivationRules.length > 0) {
+    const res = await multiselect({
+      message: 'Select Motivation & Psychology Rules:',
+      options: motivationRules,
+      required: false
+    });
+    if (res === Symbol.for('cancel')) process.exit(0);
+    selectedFiles.push(...res);
+  }
+
+  // 3. Subagents
+  const subagents = getOptionsFromDir('rules/subagents');
+  if (subagents.length > 0) {
+    const res = await multiselect({
+      message: 'Select Vibecoder Subagents:',
+      options: subagents,
+      required: false
+    });
+    if (res === Symbol.for('cancel')) process.exit(0);
+    selectedFiles.push(...res);
+  }
+
+  // 4. Skills (Folders)
+  const skills = getOptionsFromDir('skills', true);
+  if (skills.length > 0) {
+    const res = await multiselect({
+      message: 'Select Skills & Workflows:',
+      options: skills,
+      required: false
+    });
+    if (res === Symbol.for('cancel')) process.exit(0);
+    selectedFiles.push(...res);
+  }
+
+  // 5. Hooks
+  const hooks = await select({
+    message: 'Install the "Time Machine" Auto-Save Hook?',
+    options: [
+      { value: true, label: 'Yes (Recommended)' },
+      { value: false, label: 'No' }
+    ]
+  });
+  if (hooks === Symbol.for('cancel')) process.exit(0);
+  if (hooks) {
+    selectedFiles.push('hooks.json');
+    selectedFiles.push('scripts/time_machine.js');
+  }
+
+  if (selectedFiles.length === 0) {
+    outro(pc.yellow('No modules selected. Exiting.'));
+    process.exit(0);
+  }
 
   const aiTarget = await select({
     message: 'Which AI Assistant are you using?',
     options: [
-      { value: 'antigravity', label: 'Antigravity AI (Full Features)' },
+      { value: 'antigravity', label: 'Antigravity AI (Full Modular Setup)' },
       { value: 'cursor', label: 'Cursor (.cursorrules)' },
       { value: 'windsurf', label: 'Windsurf (.windsurfrules)' },
       { value: 'claude', label: 'Claude Projects (Markdown Export)' },
@@ -34,18 +112,17 @@ async function runCLI() {
   if (aiTarget === Symbol.for('cancel')) { process.exit(0); }
 
   const s = spinner();
-  s.start(`Compiling your toolkit for ${aiTarget}...`);
+  s.start(`Compiling your customized toolkit for ${aiTarget}...`);
 
   const targetDir = process.cwd();
 
   try {
     if (aiTarget === 'antigravity') {
-      await compileAntigravity(features, targetDir);
+      await compileAntigravity(selectedFiles, targetDir);
     } else if (aiTarget === 'cursor' || aiTarget === 'windsurf') {
-      // For demo purposes, they use the same compiler strategy
-      await compileCursor(features, targetDir);
+      await compileCursor(selectedFiles, targetDir, aiTarget);
     } else if (aiTarget === 'claude') {
-      await compileClaude(features, targetDir);
+      await compileClaude(selectedFiles, targetDir);
     }
     
     s.stop('Compilation complete!');
