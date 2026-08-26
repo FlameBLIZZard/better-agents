@@ -51,6 +51,35 @@ const PRESETS = {
     'skills/architecture_scaffolding',
     'skills/component_decoupling_engine',
     'rules/token_conservation.md'
+  ],
+  'open-source': [
+    'workflows/oss_contributor_protocol.md',
+    'skills/github_publisher',
+    'subagents/code_librarian.md',
+    'subagents/system_architect.md',
+    'rules/code_reuse_mandate.md'
+  ],
+  security: [
+    'workflows/zero_day_response.md',
+    'workflows/incident_response_protocol.md',
+    'skills/red_team_pentester',
+    'skills/devils_advocate_planning',
+    'subagents/silent_fixer.md'
+  ],
+  designer: [
+    'workflows/design_system_extractor.md',
+    'skills/svg_graphics_engine',
+    'subagents/design_translator.md',
+    'subagents/vector_artist.md',
+    'subagents/ui_qa_engineer.md'
+  ],
+  'legacy-killer': [
+    'workflows/legacy_modernization_protocol.md',
+    'workflows/tech_debt_eradicator.md',
+    'skills/component_decoupling_engine',
+    'skills/snippet_harvesting_engine',
+    'subagents/refactoring_specialist.md',
+    'rules/code_reuse_mandate.md'
   ]
 };
 
@@ -110,8 +139,12 @@ async function runCLI(args = []) {
       const chosenPreset = await select({
         message: 'Choose a Preset Loadout:',
         options: [
-          { value: 'founder', label: 'The Startup Founder (Prototyping, Market Research, Autopilot)' },
-          { value: 'enterprise', label: 'The Enterprise Architect (Architecture, QA, Refactoring, CI/CD)' }
+          { value: 'founder', label: '🚀 The Startup Founder (Prototyping, Market Research, Autopilot)' },
+          { value: 'enterprise', label: '🏢 The Enterprise Architect (Architecture, QA, Refactoring)' },
+          { value: 'open-source', label: '🤝 The OSS Core Contributor (GitHub workflows, Architecture cloning)' },
+          { value: 'security', label: '🛡️ The Security Auditor (Zero-day patching, Pentesting)' },
+          { value: 'designer', label: '🎨 The Design Systems Engineer (SVG graphics, UI extraction)' },
+          { value: 'legacy-killer', label: '🧹 The Technical Debt Eradicator (Refactoring, Decoupling, DRY logic)' }
         ]
       });
       if (isCancel(chosenPreset)) { cancel('Operation cancelled.'); process.exit(0); }
