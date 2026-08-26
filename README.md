@@ -156,6 +156,14 @@ npx better-agents init --preset enterprise
 
 The installer will ask you which AI Assistant you are using (Cursor, Windsurf, Claude, or Antigravity) and compile the modules into the correct format for your specific IDE.
 
+### 🔄 State Management & Updates
+When you run `init`, a `better-agents.json` file is generated in your project root (similar to `package.json`). This saves your exact team configuration.
+
+To pull down the latest prompt-engineering updates from the global NPM registry without having to go through the checklist again, just run:
+```bash
+npx better-agents update
+```
+
 ---
 
 ## 🌍 The Marketplace (Community Hub)

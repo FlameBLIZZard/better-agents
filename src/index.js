@@ -57,6 +57,36 @@ const PRESETS = {
 async function runCLI(args = []) {
   intro(pc.bgMagenta(pc.black(' Better Agents - Universal Installer ')));
 
+  const command = args[0] || 'init'; // default to init
+
+  if (command === 'update') {
+    const configPath = path.join(process.cwd(), 'better-agents.json');
+    if (!fs.existsSync(configPath)) {
+      cancel('No better-agents.json found in this directory. Run `npx better-agents init` first.');
+      process.exit(1);
+    }
+
+    const config = JSON.parse(fs.readFileSync(configPath, 'utf-8'));
+    const s = spinner();
+    s.start(`Updating and re-compiling toolkit for ${config.target}...`);
+    
+    try {
+      if (config.target === 'antigravity') {
+        await compileAntigravity(config.modules, process.cwd());
+      } else if (config.target === 'cursor' || config.target === 'windsurf') {
+        await compileCursor(config.modules, process.cwd(), config.target);
+      } else if (config.target === 'claude') {
+        await compileClaude(config.modules, process.cwd());
+      }
+      s.stop('Update complete!');
+      outro(pc.green('Your agents have been synced to the latest versions!'));
+    } catch (err) {
+      s.stop(pc.red('Update failed.'));
+      console.error(err);
+    }
+    return;
+  }
+
   const presetIndex = args.indexOf('--preset');
   const presetName = presetIndex !== -1 ? args[presetIndex + 1] : null;
 
@@ -179,8 +209,15 @@ async function runCLI(args = []) {
       await compileClaude(selectedFiles, targetDir);
     }
     
+    // Save state
+    const configPath = path.join(targetDir, 'better-agents.json');
+    fs.writeFileSync(configPath, JSON.stringify({
+      target: aiTarget,
+      modules: selectedFiles
+    }, null, 2));
+
     s.stop('Compilation complete!');
-    outro(pc.green('You are all set! Happy Coding.'));
+    outro(pc.green('You are all set! Configuration saved to better-agents.json. Happy Coding.'));
   } catch (error) {
     s.stop(pc.red('Compilation failed.'));
     console.error(error);
