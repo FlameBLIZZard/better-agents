@@ -72,11 +72,11 @@ QA agent that strictly reviews frontend code for padding, styling, and UI consis
 ---
 
 <!-- STATS:START -->
-## 📊 The Arsenal (33 Modules & Counting)
+## 📊 The Arsenal (34 Modules & Counting)
 
 ```mermaid
 pie title The Agentic Toolkit Breakdown
-    "Core Rules" : 15
+    "Core Rules" : 16
     "Advanced Skills" : 7
     "Subagents" : 6
     "Lifecycle Hooks" : 4
@@ -96,6 +96,7 @@ pie title The Agentic Toolkit Breakdown
 - 🕵️ **Dynamic User Profiler**: Analyzes your skill level and chat behavior to dynamically adjust its own tone and verbosity.
 - 🎓 **Beginner Documentation**: Auto-generates a simple `PROJECT_TOUR.md` using real-world analogies.
 - 📉 **Strict Token Conservation**: Strips AI filler and forces targeted edits to save context and money.
+- 🧠 **Continuous Learning Protocol**: Forces the AI to document its mistakes in a Knowledge Base to prevent recurring errors.
 - 🛤️ **The 3-Option Ideation**: Forbids unilateral decisions; the agent must present 3 distinct choices.
 - 🧹 **Clean Desk Policy**: Automatically deletes temporary scratch files once a task is finished.
 - 🚀 **GitHub Publish Ready**: Stops you from blindly pushing code and recommends an open-source audit first.
