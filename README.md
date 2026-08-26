@@ -46,6 +46,12 @@ Enforce best practices and protect your context window natively.
 - 🚀 **GitHub Publish Ready (`github_publish_ready.md`)**: Stops you from blindly pushing code and recommends an open-source audit first.
 - 🐳 **Docker-First Deployment (`docker_first.md`)**: Prevents the agent from dumping raw Dockerfiles in chat, forcing it to actually test the build locally first.
 
+#### 🧠 Motivation & Psychology Rules
+- 🔥 **The Hype Man (`hype_man.md`)**: Drops the robotic AI tone to aggressively hype you up after you fix a nasty bug or deploy.
+- 🛑 **Anti-Burnout Protocol (`anti_burnout.md`)**: If you're stuck in a rut, the agent refuses to give you code and orders you to take a walk while it debugs in the background.
+- 🎮 **RPG Gamification (`gamification.md`)**: Awards you "+50 XP" and levels up your stats when you complete UI components or merge PRs.
+- 🏆 **The Small Wins Tracker (`small_wins.md`)**: Interrupts you when you're overwhelmed to remind you of the amazing foundation you've already built today.
+
 </details>
 
 ---

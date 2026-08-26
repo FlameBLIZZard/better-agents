@@ -13,7 +13,11 @@
     ".agents/rules/clean_desk_policy.md",
     ".agents/rules/skill_inventory_manager.md",
     ".agents/rules/github_publish_ready.md",
-    ".agents/rules/docker_first.md"
+    ".agents/rules/docker_first.md",
+    ".agents/rules/motivation/hype_man.md",
+    ".agents/rules/motivation/anti_burnout.md",
+    ".agents/rules/motivation/gamification.md",
+    ".agents/rules/motivation/small_wins.md"
   ],
   "skills": [
     ".agents/skills/auto_linter_loop/SKILL.md",
