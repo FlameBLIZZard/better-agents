@@ -69,6 +69,9 @@ Ruthlessly breaks down massive files to enforce the Single Responsibility Princi
 ### 📚 `@code-librarian` (Efficiency Engineer)
 Aggressively enforces the DRY principle and hunts for existing code snippets to save tokens.
 
+### 🗄️ `@archivist` (Knowledge Base Manager)
+Continuously observes and synthesizes context into the permanent Memory Bank.
+
 ### 🕵️ `@market-researcher` (Product Strategist)
 Scours developer forums and internet communities for validated pain points before you write a single line of code.
 
@@ -100,6 +103,7 @@ Workflows are the highest level of abstraction. They simulate an entire company 
 - 🎨 **Design System Extractor**: Extracts arbitrary CSS and inline styles into a strict, unified design system.
 - 🛡️ **Zero-Day Vulnerability Response**: Purely defensive security pipeline that audits exploits, applies silent patches, and writes incident reports.
 - 🤝 **Open-Source Contributor**: Maps massive open-source repos and acts as a chameleon to perfectly clone their internal style for PRs.
+- 👯 **Teamwork Pre-Configs**: JSON payloads (like `saas_startup.json`) specifically designed for Antigravity's `/teamwork-preview` command.
 
 ---
 
@@ -116,6 +120,7 @@ Workflows are the highest level of abstraction. They simulate an entire company 
 - 🧠 **Continuous Learning Protocol**: Forces the AI to document its mistakes in a Knowledge Base to prevent recurring errors.
 - 🛤️ **The 3-Option Ideation**: Forbids unilateral decisions; the agent must present 3 distinct choices.
 - 🧹 **Clean Desk Policy**: Automatically deletes temporary scratch files once a task is finished.
+- 🗄️ **The Permanent Memory Bank**: (New) Solves AI amnesia by enforcing the continuous curation and reading of a persistent MEMORY.md file.
 - 🚀 **GitHub Publish Ready**: Stops you from blindly pushing code and recommends an open-source audit first.
 
 </details>
@@ -171,10 +176,20 @@ npx better-agents init --preset enterprise
 
 The installer will ask you which AI Assistant you are using (Cursor, Windsurf, Claude, or Antigravity) and compile the modules into the correct format for your specific IDE.
 
-### 🔄 State Management & Updates
-When you run `init`, a `better-agents.json` file is generated in your project root (similar to `package.json`). This saves your exact team configuration.
+## 🔄 State Management & Updates
 
-To pull down the latest prompt-engineering updates from the global NPM registry without having to go through the checklist again, just run:
+`better-agents` utilizes a `better-agents.json` state file in your project root to track which modules you have installed.
+
+### Adding New Modules Incrementally
+If you want to add a single new rule or agent without re-running the entire initialization wizard, use the `add` command:
+
+```bash
+npx better-agents add subagents/ui_qa_engineer.md
+```
+*This instantly downloads the module, updates your `better-agents.json`, and recompiles your workspace!*
+
+### Updating the Toolkit
+If we push new logic to the upstream `better-agents` repository (e.g. optimizing the `@refactoring-specialist`), you can sync your local workspace by simply running:
 ```bash
 npx better-agents update
 ```

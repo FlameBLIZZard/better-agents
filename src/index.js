@@ -116,6 +116,34 @@ async function runCLI(args = []) {
     return;
   }
 
+  if (command === 'add') {
+    const moduleName = args[1];
+    if (!moduleName) {
+      console.error(pc.red('Please specify a module to add (e.g., npx better-agents add subagents/autopilot.md)'));
+      process.exit(1);
+    }
+
+    const configPath = path.join(process.cwd(), 'better-agents.json');
+    if (!fs.existsSync(configPath)) {
+      console.error(pc.red('No better-agents.json found. Run `init` first.'));
+      process.exit(1);
+    }
+
+    const config = JSON.parse(fs.readFileSync(configPath, 'utf-8'));
+    if (!config.modules.includes(moduleName)) {
+      config.modules.push(moduleName);
+      fs.writeFileSync(configPath, JSON.stringify(config, null, 2));
+      console.log(pc.green(`✔ Added ${moduleName} to better-agents.json`));
+      
+      // Auto update
+      console.log(pc.cyan('Running update to compile your new toolkit...'));
+      return runCLI(['update']);
+    } else {
+      console.log(pc.yellow(`Module ${moduleName} is already installed.`));
+      return;
+    }
+  }
+
   const presetIndex = args.indexOf('--preset');
   const presetName = presetIndex !== -1 ? args[presetIndex + 1] : null;
 

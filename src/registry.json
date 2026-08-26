@@ -11,6 +11,7 @@
   "rules/skill_inventory_manager.md": "Scans and lists all your installed skills in a clean table on demand.",
   "rules/three_option_ideation.md": "Forbids unilateral decisions; the agent must present 3 distinct choices.",
   "rules/token_conservation.md": "Strips out AI conversational filler and forces targeted file edits to save you money.",
+  "rules/memory_bank.md": "Solves AI amnesia by enforcing the continuous curation and reading of a persistent MEMORY.md file.",
   
   "rules/positive_reinforcement.md": "Provides targeted positive reinforcement and psychological safety after resolving critical incidents.",
   "rules/anti_burnout.md": "Enforces strict timeboxing and cognitive breaks during prolonged debugging sessions.",
@@ -42,6 +43,8 @@
   "skills/component_decoupling_engine": "Breaks massive 'god files' into pure, modular, and composable layers.",
   "skills/snippet_harvesting_engine": "Executes targeted codebase searches to harvest and reuse existing logic to save tokens.",
   
+  "teamwork/saas_startup.json": "Pre-configured payload for the /teamwork-preview command. Spawns a PM, Frontend, Backend, and QA agent.",
+
   "workflows/app_clone.md": "The Project Manager. Manages a Kanban board and delegates tasks to clone an existing UI.",
   "workflows/product_lifecycle_orchestrator.md": "End-to-end orchestration from market research ideation to MVP execution.",
   "workflows/deployment_gatekeeper_pipeline.md": "Strict CI/CD gatekeeper. Audits security, containerizes, and tags GitHub releases.",
