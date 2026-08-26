@@ -80,6 +80,14 @@ const PRESETS = {
     'skills/snippet_harvesting_engine',
     'subagents/refactoring_specialist.md',
     'rules/code_reuse_mandate.md'
+  ],
+  'autonomous-company': [
+    'workflows/dynamic_orchestration_protocol.md',
+    'subagents/chief_executive.md',
+    'subagents/archivist.md',
+    'subagents/ui_qa_engineer.md',
+    'subagents/refactoring_specialist.md',
+    'rules/memory_bank.md'
   ]
 };
 
@@ -172,7 +180,8 @@ async function runCLI(args = []) {
           { value: 'open-source', label: '🤝 The OSS Core Contributor (GitHub workflows, Architecture cloning)' },
           { value: 'security', label: '🛡️ The Security Auditor (Zero-day patching, Pentesting)' },
           { value: 'designer', label: '🎨 The Design Systems Engineer (SVG graphics, UI extraction)' },
-          { value: 'legacy-killer', label: '🧹 The Technical Debt Eradicator (Refactoring, Decoupling, DRY logic)' }
+          { value: 'legacy-killer', label: '🧹 The Technical Debt Eradicator (Refactoring, Decoupling, DRY logic)' },
+          { value: 'autonomous-company', label: '👔 The Autonomous Company (Dynamic Orchestration, Recursive Spawning)' }
         ]
       });
       if (isCancel(chosenPreset)) { cancel('Operation cancelled.'); process.exit(0); }

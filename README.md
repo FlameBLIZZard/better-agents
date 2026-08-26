@@ -173,6 +173,7 @@ npx better-agents init --preset enterprise
 - `security`: Automated zero-day patching and pentesting.
 - `designer`: SVG graphics and Design System extraction.
 - `legacy-killer`: Surgical extraction of duplicate code and monolithic files.
+- `autonomous-company`: (New) Transforms your IDE into a company by recursively spawning subagents to execute massive tasks.
 
 The installer will ask you which AI Assistant you are using (Cursor, Windsurf, Claude, or Antigravity) and compile the modules into the correct format for your specific IDE.
 

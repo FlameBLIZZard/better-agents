@@ -26,6 +26,8 @@
   "subagents/ui_qa_engineer.md": "Frontend QA. Enforces strict UI/UX consistency, spacing constraints, and component styling standards.",
   "subagents/market_researcher.md": "Product Strategist. Scours the internet for validated pain points before you write a single line of code.",
   "subagents/vector_artist.md": "Vector Graphics Engineer. Mathematically plots and generates raw SVG illustrations and animations.",
+  "subagents/archivist.md": "Knowledge Base Manager. Continuously observes and synthesizes context into the permanent Memory Bank.",
+  "subagents/chief_executive.md": "Dynamic Orchestrator. Strictly forbidden from coding. Uses define_subagent to spawn and manage a temporary workforce.",
   "subagents/system_architect.md": "Infrastructure Lead. Designs and scaffolds highly scalable, strictly boundaried folder hierarchies.",
   "subagents/refactoring_specialist.md": "Staff Engineer. Ruthlessly breaks down massive files to enforce the Single Responsibility Principle.",
   "subagents/code_librarian.md": "Efficiency Engineer. Aggressively enforces the DRY principle and hunts for reusable code.",
@@ -46,6 +48,7 @@
   "teamwork/saas_startup.json": "Pre-configured payload for the /teamwork-preview command. Spawns a PM, Frontend, Backend, and QA agent.",
 
   "workflows/app_clone.md": "The Project Manager. Manages a Kanban board and delegates tasks to clone an existing UI.",
+  "workflows/dynamic_orchestration_protocol.md": "Transforms the IDE into an autonomous company. The Chief Executive recursively spawns, manages, and terminates temporary agents.",
   "workflows/product_lifecycle_orchestrator.md": "End-to-end orchestration from market research ideation to MVP execution.",
   "workflows/deployment_gatekeeper_pipeline.md": "Strict CI/CD gatekeeper. Audits security, containerizes, and tags GitHub releases.",
   "workflows/legacy_modernization_protocol.md": "Surgical orchestration to modernize ancient codebases into decoupled architectures.",
