@@ -4,7 +4,15 @@ An ever-growing, limitless collection of optimized, modular rules and skills for
 
 ## 🌟 Current Features
 
-Our toolkit currently includes the following rules and skills:
+Our toolkit currently includes the following rules, skills, and subagents:
+
+### 🤖 Subagents (The Vibecoder Production Studio)
+A specialized cast of AI subagents designed for "vibecoding"—where you act as the Creative Director and the AI writes the code. Defined in `vibecoder_subagents.md`.
+1. **`@vibe-translator`**: Translates abstract aesthetic ideas (e.g., "cyberpunk coffee shop") into strict technical specs for coding agents.
+2. **`@autopilot`**: The autonomous developer that takes a spec and silently grinds in the background to build the entire MVP without asking questions.
+3. **`@silent-fixer`**: Paste a stack trace, and it patches the code without explaining anything. It just says "Fixed. Refresh."
+4. **`@concept-artist`**: Uses AI image generation to visually mock up 3 UI concepts for you to choose from before any code is written.
+5. **`@vibe-check`**: A QA agent that strictly reviews generated frontend code for aesthetic quality, padding, and styling consistency.
 
 ### 📜 Rules
 1. **Interactive Planning (`project_alignment.md`):** Forces the agent to pause and interview you (`/grill-me`) before scaffolding new projects.
