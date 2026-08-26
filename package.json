@@ -1,0 +1,24 @@
+{
+  "name": "better-agents",
+  "version": "1.0.0",
+  "description": "Universal AI Toolkit for Vibecoders",
+  "main": "src/index.js",
+  "bin": {
+    "better-agents": "./bin/cli.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FlameBLIZZard/better-agents.git"
+  },
+  "author": "FlameBLIZZard",
+  "license": "MIT",
+  "type": "commonjs",
+  "dependencies": {
+    "@clack/prompts": "^0.7.0",
+    "fs-extra": "^11.2.0",
+    "picocolors": "^1.0.0"
+  }
+}
