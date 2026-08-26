@@ -68,6 +68,29 @@ async function runCLI(args = []) {
     selectedFiles = [...PRESETS[presetName]];
     console.log(pc.green(`\nLoaded preset: ${presetName}`));
   } else {
+    const buildMethod = await select({
+      message: 'How would you like to build your toolkit?',
+      options: [
+        { value: 'preset', label: '🚀 Select a Preset Loadout (Recommended)' },
+        { value: 'manual', label: '🛠️ Build a Custom Toolkit (Manual Checklist)' }
+      ]
+    });
+
+    if (isCancel(buildMethod)) { cancel('Operation cancelled.'); process.exit(0); }
+
+    if (buildMethod === 'preset') {
+      const chosenPreset = await select({
+        message: 'Choose a Preset Loadout:',
+        options: [
+          { value: 'founder', label: 'The Startup Founder (Prototyping, Market Research, Autopilot)' },
+          { value: 'enterprise', label: 'The Enterprise Architect (Architecture, QA, Refactoring, CI/CD)' }
+        ]
+      });
+      if (isCancel(chosenPreset)) { cancel('Operation cancelled.'); process.exit(0); }
+      
+      selectedFiles = [...PRESETS[chosenPreset]];
+      console.log(pc.green(`\nLoaded preset: ${chosenPreset}`));
+    } else {
     // 1. Core Rules
     const coreRules = getOptionsFromDir('rules');
     if (coreRules.length > 0) {
@@ -123,6 +146,7 @@ async function runCLI(args = []) {
       if (selectedHooks.includes('time-machine')) selectedFiles.push('scripts/time_machine.js');
       if (selectedHooks.includes('auto-formatter')) selectedFiles.push('scripts/auto_formatter.js');
       if (selectedHooks.includes('cost-tracker')) selectedFiles.push('scripts/cost_tracker.js');
+    }
     }
   }
 
