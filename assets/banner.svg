@@ -1,48 +1,25 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 300" width="1000" height="300">
-  <defs>
-    <pattern id="scanlines" width="4" height="4" patternUnits="userSpaceOnUse">
-      <rect width="4" height="1" fill="#ffffff" fill-opacity="0.03" />
-    </pattern>
-    <clipPath id="glitch-clip-1">
-      <rect x="0" y="130" width="1000" height="8" />
-    </clipPath>
-    <clipPath id="glitch-clip-2">
-      <rect x="0" y="100" width="1000" height="4" />
-    </clipPath>
-  </defs>
-
-  <rect width="1000" height="300" fill="#050505" />
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 250" width="800" height="250">
+  <!-- Deep black background -->
+  <rect width="800" height="250" fill="#000000" />
   
-  <g stroke="#ffffff" stroke-opacity="0.02" stroke-width="1">
-    <line x1="0" y1="50" x2="1000" y2="50" />
-    <line x1="0" y1="100" x2="1000" y2="100" />
-    <line x1="0" y1="150" x2="1000" y2="150" />
-    <line x1="0" y1="200" x2="1000" y2="200" />
-    <line x1="0" y1="250" x2="1000" y2="250" />
-    <line x1="200" y1="0" x2="200" y2="300" />
-    <line x1="400" y1="0" x2="400" y2="300" />
-    <line x1="600" y1="0" x2="600" y2="300" />
-    <line x1="800" y1="0" x2="800" y2="300" />
+  <!-- Subtle wave at the bottom to match the old capsule-render style -->
+  <path d="M0,250 L0,200 C200,150 600,250 800,200 L800,250 Z" fill="#111111" />
+  <path d="M0,250 L0,210 C300,170 500,260 800,210 L800,250 Z" fill="#222222" opacity="0.5" />
+
+  <!-- Subtle Chromatic Aberration Text Group -->
+  <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-weight="800" font-size="80" text-anchor="middle">
+    
+    <!-- Red/Magenta Shift (Slight 3px Left) -->
+    <text x="397" y="130" fill="#ff0055" opacity="0.6" style="mix-blend-mode: screen;">Better Agents</text>
+    
+    <!-- Blue/Cyan Shift (Slight 3px Right) -->
+    <text x="403" y="130" fill="#00f0ff" opacity="0.6" style="mix-blend-mode: screen;">Better Agents</text>
+    
+    <!-- Core White Text -->
+    <text x="400" y="130" fill="#ffffff">Better Agents</text>
+    
   </g>
 
-  <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-weight="900" font-size="90" text-anchor="middle">
-    <text x="495" y="160" fill="#ff0055" opacity="0.9" style="mix-blend-mode: screen;">Better Agents</text>
-    <text x="505" y="160" fill="#00f0ff" opacity="0.9" style="mix-blend-mode: screen;">Better Agents</text>
-    <text x="500" y="160" fill="#ffffff">Better Agents</text>
-  </g>
-
-  <text x="500" y="215" fill="#888888" font-family="monospace" font-size="20" text-anchor="middle" letter-spacing="6">THE ULTIMATE AI AGENT TOOLKIT</text>
-
-  <!-- Animated Glitch Slices -->
-  <g opacity="0">
-    <animate attributeName="opacity" values="0;1;0;0;0" dur="4s" repeatCount="indefinite" />
-    <text x="480" y="160" fill="#00f0ff" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-weight="900" font-size="90" text-anchor="middle" clip-path="url(#glitch-clip-1)">Better Agents</text>
-  </g>
-  
-  <g opacity="0">
-    <animate attributeName="opacity" values="0;0;0;1;0" dur="5s" repeatCount="indefinite" />
-    <text x="520" y="160" fill="#ff0055" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-weight="900" font-size="90" text-anchor="middle" clip-path="url(#glitch-clip-2)">Better Agents</text>
-  </g>
-
-  <rect width="1000" height="300" fill="url(#scanlines)" />
+  <!-- Clean Subtitle -->
+  <text x="400" y="175" fill="#cccccc" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="20" font-weight="500" text-anchor="middle">The Ultimate AI Agent Toolkit</text>
 </svg>
