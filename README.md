@@ -84,6 +84,20 @@ Massive, multi-step agentic orchestrations that manage multiple subagents and ma
 
 ---
 
+## 🪝 Lifecycle Hooks
+
+Invisible scripts that run automatically behind the scenes at specific agent lifecycle events (like before a tool is used, or after a step is completed).
+
+<details>
+<summary><b>Click to expand available Hooks</b></summary>
+<br>
+
+- ⏱️ **The "Time Machine" Auto-Save (`hooks.json`)**: An invisible background script (`time_machine.sh`) that silently commits your code to Git after *every single AI step*. If the AI ever ruins your project, you can instantly hit undo and roll back to exactly how the code looked 5 minutes ago.
+
+</details>
+
+---
+
 ## 🚀 How to Install
 
 Antigravity natively supports discovering modular rules and skills placed in the `.agents/` directory.
