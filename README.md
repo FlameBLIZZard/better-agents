@@ -25,7 +25,7 @@
 You don't need to manually clone or copy any folders! Just run our stunning interactive CLI directly from your terminal:
 
 <p align="center">
-  <img src="./assets/terminal.svg?v=2" alt="CLI Terminal Animation" width="800">
+  <img src="./assets/terminal.svg?v=3" alt="CLI Terminal Animation" width="800">
 </p>
 
 ```bash
