@@ -136,9 +136,29 @@ Workflows are the highest level of abstraction. They simulate an entire company 
 
 ---
 
-## 🌍 The Marketplace (Community Hub)
+## 🚀 Quick Start
 
-`better-agents` isn't just a toolkit; it's a global marketplace for developers to share their most powerful AI prompts.
+Run the CLI at the root of any repository:
+```bash
+npx better-agents init
+```
+
+### 🎯 Preset Loadouts (New)
+Skip the 40-item checklist and instantly load curated module stacks:
+
+```bash
+# The Startup Founder Stack (Prototyping, Market Research, Autopilot)
+npx better-agents init --preset founder
+
+# The Enterprise Stack (Architecture, QA, Refactoring, CI/CD)
+npx better-agents init --preset enterprise
+```
+
+The installer will ask you which AI Assistant you are using (Cursor, Windsurf, Claude, or Antigravity) and compile the modules into the correct format for your specific IDE.
+
+---
+
+## 🌍 The Marketplace (Community Hub)
 
 Want to add your own custom `@seo-expert` subagent or an automated `database_migrator` skill? 
 It is incredibly easy to contribute:

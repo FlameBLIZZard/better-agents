@@ -1,14 +1,21 @@
 {
   "name": "better-agents",
   "version": "1.0.0",
-  "description": "Universal AI Toolkit for Vibecoders",
+  "description": "Enterprise-grade AI orchestration toolkit for advanced agentic development.",
   "main": "src/index.js",
   "bin": {
     "better-agents": "./bin/cli.js"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "vitest run"
   },
+  "keywords": [
+    "ai-agents",
+    "cursor-rules",
+    "developer-tools",
+    "orchestration",
+    "cli"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/FlameBLIZZard/better-agents.git"
@@ -20,5 +27,8 @@
     "@clack/prompts": "^0.7.0",
     "fs-extra": "^11.2.0",
     "picocolors": "^1.0.0"
+  },
+  "devDependencies": {
+    "vitest": "^1.0.0"
   }
 }

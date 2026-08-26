@@ -2,7 +2,7 @@
 
 const { runCLI } = require('../src/index.js');
 
-runCLI().catch((err) => {
+runCLI(process.argv.slice(2)).catch((err) => {
   console.error(err);
   process.exit(1);
 });

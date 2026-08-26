@@ -39,66 +39,91 @@ function getOptionsFromDir(dirRelPath, isDirectoryMode = false) {
   return options;
 }
 
-async function runCLI() {
+const PRESETS = {
+  founder: [
+    'subagents/market_researcher.md',
+    'subagents/autopilot.md',
+    'skills/problem_discovery_engine',
+    'rules/continuous_learning_protocol.md'
+  ],
+  enterprise: [
+    'subagents/system_architect.md',
+    'subagents/refactoring_specialist.md',
+    'subagents/ui_qa_engineer.md',
+    'skills/architecture_scaffolding',
+    'skills/component_decoupling_engine',
+    'rules/token_conservation.md'
+  ]
+};
+
+async function runCLI(args = []) {
   intro(pc.bgMagenta(pc.black(' Better Agents - Universal Installer ')));
 
-  const selectedFiles = [];
+  const presetIndex = args.indexOf('--preset');
+  const presetName = presetIndex !== -1 ? args[presetIndex + 1] : null;
 
-  // 1. Core Rules
-  const coreRules = getOptionsFromDir('rules');
-  if (coreRules.length > 0) {
-    const res = await multiselect({
-      message: 'Select Core Rules:',
-      options: coreRules,
+  let selectedFiles = [];
+
+  if (presetName && PRESETS[presetName]) {
+    selectedFiles = [...PRESETS[presetName]];
+    console.log(pc.green(`\nLoaded preset: ${presetName}`));
+  } else {
+    // 1. Core Rules
+    const coreRules = getOptionsFromDir('rules');
+    if (coreRules.length > 0) {
+      const res = await multiselect({
+        message: 'Select Core Rules:',
+        options: coreRules,
+        required: false
+      });
+      if (isCancel(res)) { cancel('Operation cancelled.'); process.exit(0); }
+      selectedFiles.push(...res);
+    }
+
+    // 2. Subagents
+    const subagents = getOptionsFromDir('subagents');
+    if (subagents.length > 0) {
+      const res = await multiselect({
+        message: 'Select Subagents:',
+        options: subagents,
+        required: false
+      });
+      if (isCancel(res)) { cancel('Operation cancelled.'); process.exit(0); }
+      selectedFiles.push(...res);
+    }
+
+    // 4. Skills & Workflows (Folders)
+    const skills = getOptionsFromDir('skills', true);
+    if (skills.length > 0) {
+      const res = await multiselect({
+        message: 'Select Skills & Workflows:',
+        options: skills,
+        required: false
+      });
+      if (isCancel(res)) { cancel('Operation cancelled.'); process.exit(0); }
+      selectedFiles.push(...res);
+    }
+
+    // 5. Hooks
+    const availableHooks = [
+      { value: 'time-machine', label: 'Time Machine (Auto-Save)', hint: extractHint('hooks.json') },
+      { value: 'auto-formatter', label: 'Auto-Formatter (Prettier)', hint: extractHint('scripts/auto_formatter.js') },
+      { value: 'cost-tracker', label: 'Token Cost Tracker', hint: extractHint('scripts/cost_tracker.js') }
+    ];
+
+    const selectedHooks = await multiselect({
+      message: 'Install Invisible Lifecycle Hooks?',
+      options: availableHooks,
       required: false
     });
-    if (isCancel(res)) { cancel('Operation cancelled.'); process.exit(0); }
-    selectedFiles.push(...res);
-  }
+    if (isCancel(selectedHooks)) { cancel('Operation cancelled.'); process.exit(0); }
 
-  // 2. Subagents
-  const subagents = getOptionsFromDir('subagents');
-  if (subagents.length > 0) {
-    const res = await multiselect({
-      message: 'Select Subagents:',
-      options: subagents,
-      required: false
-    });
-    if (isCancel(res)) { cancel('Operation cancelled.'); process.exit(0); }
-    selectedFiles.push(...res);
-  }
-
-  // 4. Skills (Folders)
-  const skills = getOptionsFromDir('skills', true);
-  if (skills.length > 0) {
-    const res = await multiselect({
-      message: 'Select Skills & Workflows:',
-      options: skills,
-      required: false
-    });
-    if (isCancel(res)) { cancel('Operation cancelled.'); process.exit(0); }
-    selectedFiles.push(...res);
-  }
-
-  // 5. Hooks
-  const availableHooks = [
-    { value: 'time-machine', label: 'Time Machine (Auto-Save)', hint: extractHint('hooks.json') }, // keep old hint fallback or use registry
-    { value: 'auto-formatter', label: 'Auto-Formatter (Prettier)', hint: extractHint('scripts/auto_formatter.js') },
-    { value: 'cost-tracker', label: 'Token Cost Tracker', hint: extractHint('scripts/cost_tracker.js') }
-  ];
-
-  const selectedHooks = await multiselect({
-    message: 'Install Invisible Lifecycle Hooks?',
-    options: availableHooks,
-    required: false
-  });
-  if (isCancel(selectedHooks)) { cancel('Operation cancelled.'); process.exit(0); }
-
-  if (selectedHooks.length > 0) {
-    selectedFiles.push('hooks.json'); // We will just copy the master hooks.json for simplicity
-    if (selectedHooks.includes('time-machine')) selectedFiles.push('scripts/time_machine.js');
-    if (selectedHooks.includes('auto-formatter')) selectedFiles.push('scripts/auto_formatter.js');
-    if (selectedHooks.includes('cost-tracker')) selectedFiles.push('scripts/cost_tracker.js');
+    if (selectedHooks.length > 0) {
+      selectedFiles.push('hooks.json');
+      if (selectedHooks.includes('time-machine')) selectedFiles.push('scripts/time_machine.js');
+      if (selectedHooks.includes('auto-formatter')) selectedFiles.push('scripts/auto_formatter.js');
+      if (selectedHooks.includes('cost-tracker')) selectedFiles.push('scripts/cost_tracker.js');
+    }
   }
 
   if (selectedFiles.length === 0) {
