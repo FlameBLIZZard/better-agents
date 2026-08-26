@@ -78,6 +78,7 @@ QA agent that strictly reviews frontend code for padding, styling, and UI consis
 <br>
 
 - 🗣️ **Interactive Planning**: Forces the agent to interview you (`/grill-me`) before scaffolding.
+- 🕵️ **Dynamic User Profiler**: Analyzes your skill level and chat behavior to dynamically adjust its own tone and verbosity.
 - 🎓 **Beginner Documentation**: Auto-generates a simple `PROJECT_TOUR.md` using real-world analogies.
 - 📉 **Strict Token Conservation**: Strips AI filler and forces targeted edits to save context and money.
 - 🛤️ **The 3-Option Ideation**: Forbids unilateral decisions; the agent must present 3 distinct choices.

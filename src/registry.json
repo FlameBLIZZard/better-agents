@@ -1,5 +1,6 @@
 {
   "rules/artifact_first.md": "Prevents the AI from dumping massive text blocks in chat by saving answers as files.",
+  "rules/user_profiler.md": "Actively studies your coding style and skill level to dynamically adjust its tone and verbosity.",
   "rules/beginner_documentation.md": "Forces the agent to auto-generate a PROJECT_TOUR.md using simple, real-world analogies.",
   "rules/clean_desk_policy.md": "Automatically deletes temporary scratch files once a task is finished.",
   "rules/docker_first.md": "Prevents lazy Dockerfiles. Forces the agent to test the build locally first.",
