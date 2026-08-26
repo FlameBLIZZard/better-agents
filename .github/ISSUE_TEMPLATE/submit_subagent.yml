@@ -1,0 +1,49 @@
+name: 🤖 Submit a New Subagent
+description: Propose a new AI persona or role to be added to the Vibecoder Studio.
+title: "[Agent]: <Name of Subagent>"
+labels: ["enhancement", "subagent"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for contributing to the `better-agents` Marketplace! Subagents are highly specialized personas that handle specific tasks for vibecoders.
+  - type: input
+    id: agent_name
+    attributes:
+      label: Subagent Name
+      description: "e.g., @security-guard, @seo-expert"
+      placeholder: "@..."
+    validations:
+      required: true
+  - type: input
+    id: agent_role
+    attributes:
+      label: Role Title
+      description: "A 2-3 word job title. e.g., 'Database Admin'"
+    validations:
+      required: true
+  - type: textarea
+    id: marketing_description
+    attributes:
+      label: Marketing Description
+      description: "One snappy sentence for the CLI registry.json."
+      placeholder: "Spawns a security agent to automatically audit your backend routes."
+    validations:
+      required: true
+  - type: textarea
+    id: system_prompt
+    attributes:
+      label: The System Prompt (Markdown)
+      description: "Paste the raw markdown prompt for this subagent."
+      render: markdown
+    validations:
+      required: true
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Contributor Checklist
+      options:
+        - label: I have tested this prompt and it works exceptionally well.
+          required: true
+        - label: It does not duplicate an existing subagent.
+          required: true

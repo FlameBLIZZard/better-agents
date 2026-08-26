@@ -114,9 +114,17 @@ npx github:FlameBLIZZard/better-agents
 
 The stunning interactive wizard will ask you exactly which AI Assistant you are using (Cursor, Claude, or Antigravity) and magically compile all the selected rules directly into your project.
 
----
+## 🌍 The Marketplace (Community Hub)
 
-<p align="center">
-  <b>🤝 Contributing</b><br>
-  Because this repository is constantly growing, feel free to contribute your own favorite rules and skills to help the community build better agents!
-</p>
+`better-agents` isn't just a toolkit; it's a global marketplace for Vibecoders to share their most powerful AI prompts.
+
+Want to add your own custom `@seo-expert` subagent or an automated `database_migrator` skill? 
+It is incredibly easy to contribute:
+
+1. Head over to our **[Issues tab](https://github.com/FlameBLIZZard/better-agents/issues/new/choose)**.
+2. Select **Submit a New Subagent** or **Submit a New Skill**.
+3. Fill out the form with your prompt.
+
+Once merged, your agent will instantly become available to thousands of developers globally via the `npx github:FlameBLIZZard/better-agents` CLI installer! 
+
+👉 Read the **[Full Contributing Guide](CONTRIBUTING.md)** to learn how to open a Pull Request and register your agent in the `registry.json`.

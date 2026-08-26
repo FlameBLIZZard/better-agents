@@ -1,0 +1,41 @@
+name: 🛠️ Submit a New Skill or Workflow
+description: Propose a new multi-step workflow or custom tool loop.
+title: "[Skill]: <Name of Skill>"
+labels: ["enhancement", "skill"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for contributing to the `better-agents` Marketplace! Skills are multi-step, autonomous workflows (like the Docker Auto-Debugger).
+  - type: input
+    id: skill_name
+    attributes:
+      label: Skill Name
+      description: "e.g., supabase_migrator, tailwind_sorter"
+    validations:
+      required: true
+  - type: textarea
+    id: marketing_description
+    attributes:
+      label: Marketing Description
+      description: "One snappy sentence for the CLI registry.json."
+      placeholder: "Automatically sorts all Tailwind classes in your project."
+    validations:
+      required: true
+  - type: textarea
+    id: instructions
+    attributes:
+      label: The Instructions (Markdown)
+      description: "Paste the SKILL.md contents."
+      render: markdown
+    validations:
+      required: true
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Contributor Checklist
+      options:
+        - label: I have tested this workflow and the agent successfully executes it.
+          required: true
+        - label: It focuses on a specific, repeatable task.
+          required: true
