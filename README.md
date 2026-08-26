@@ -14,6 +14,7 @@ Our toolkit currently includes the following rules and skills:
 5. **Artifact-First Output (`artifact_first.md`):** Prevents the agent from dumping long texts into chat, forcing it to save research and data as markdown files.
 6. **The 3-Option Ideation Rule (`three_option_ideation.md`):** Forbids the agent from making architectural decisions unilaterally; it must present 3 distinct options for you to choose from.
 7. **The Clean Desk Policy (`clean_desk_policy.md`):** Forces the agent to automatically delete temporary scratch files and debug scripts once a task is finished.
+8. **Skill Inventory Manager (`skill_inventory_manager.md`):** Teaches the agent to automatically scan and list all your installed skills in a clean table whenever you ask what capabilities you have.
 
 ### 🛠️ Skills
 1. **Auto-Linter Loop (`auto_linter_loop`):** Teaches the agent to automatically run your project's linter in the background and fix syntax errors autonomously before asking for your review.
