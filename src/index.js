@@ -7,22 +7,27 @@ const { compileCursor } = require('./compilers/cursor');
 const { compileClaude } = require('./compilers/claude');
 
 // Helper to extract a brief description/hint from markdown or YAML
-function extractHint(filePath) {
+function extractHint(filePath, relPath) {
+  let hintText = '';
   try {
     const content = fs.readFileSync(filePath, 'utf-8');
     // Try to find a YAML description
     const descMatch = content.match(/description:\s*(?:>-)?\s*([^\n]+)/i);
-    if (descMatch) return descMatch[1].trim().substring(0, 60) + '...';
-    
-    // Try to find a Role (for subagents)
-    const roleMatch = content.match(/\*\*Role:\*\*\s*([^\n]+)/i);
-    if (roleMatch) return 'Role: ' + roleMatch[1].trim();
-    
-    // Default to the first Markdown header
-    const firstLine = content.split('\n').find(l => l.startsWith('# '));
-    if (firstLine) return firstLine.replace('# ', '').trim();
+    if (descMatch) hintText = descMatch[1].trim().substring(0, 50) + '...';
+    else {
+      // Try to find a Role (for subagents)
+      const roleMatch = content.match(/\*\*Role:\*\*\s*([^\n]+)/i);
+      if (roleMatch) hintText = 'Role: ' + roleMatch[1].trim();
+      else {
+        // Default to the first Markdown header
+        const firstLine = content.split('\n').find(l => l.startsWith('# '));
+        if (firstLine) hintText = firstLine.replace('# ', '').trim();
+      }
+    }
   } catch (e) {}
-  return '';
+
+  const repoUrl = `https://github.com/FlameBLIZZard/better-agents/blob/main/.agents/${relPath}`;
+  return hintText ? `${hintText} (Docs: ${repoUrl})` : `Docs: ${repoUrl}`;
 }
 
 // Helper to dynamically read directories
@@ -39,11 +44,13 @@ function getOptionsFromDir(dirRelPath, isDirectoryMode = false) {
     
     if (isDirectoryMode && stat.isDirectory()) {
       const skillMd = path.join(itemPath, 'SKILL.md');
+      const relFile = path.posix.join(dirRelPath, item, 'SKILL.md');
       let hint = '';
-      if (fs.existsSync(skillMd)) hint = extractHint(skillMd);
+      if (fs.existsSync(skillMd)) hint = extractHint(skillMd, relFile);
       options.push({ value: path.posix.join(dirRelPath, item), label: item, hint });
     } else if (!isDirectoryMode && stat.isFile() && item.endsWith('.md')) {
-      const hint = extractHint(itemPath);
+      const relFile = path.posix.join(dirRelPath, item);
+      const hint = extractHint(itemPath, relFile);
       options.push({ value: path.posix.join(dirRelPath, item), label: item.replace('.md', ''), hint });
     }
   }
