@@ -18,7 +18,7 @@ function getMarkdownFiles(itemPath, arrayOfFiles = []) {
 }
 
 async function compileClaude(selectedFiles, targetDir) {
-  const sourceBase = path.join(__dirname, '../../.agents');
+  const sourceBase = path.join(__dirname, '../.agents');
   const destFile = path.join(targetDir, 'better-agents-claude.md');
 
   let compiledContent = `# Better Agents - System Prompt\n\nUpload this file to your Claude Project Knowledge Base.\n\n`;

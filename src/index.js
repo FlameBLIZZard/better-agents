@@ -8,7 +8,7 @@ const { compileClaude } = require('./compilers/claude');
 
 // Helper to dynamically read directories
 function getOptionsFromDir(dirRelPath, isDirectoryMode = false) {
-  const fullPath = path.join(__dirname, '../../.agents', dirRelPath);
+  const fullPath = path.join(__dirname, '../.agents', dirRelPath);
   if (!fs.existsSync(fullPath)) return [];
   
   const items = fs.readdirSync(fullPath);
