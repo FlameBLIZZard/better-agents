@@ -66,6 +66,9 @@ Designs and scaffolds highly scalable, strictly boundaried folder hierarchies.
 ### ✂️ `@refactoring-specialist` (Staff Engineer)
 Ruthlessly breaks down massive files to enforce the Single Responsibility Principle.
 
+### 📚 `@code-librarian` (Efficiency Engineer)
+Aggressively enforces the DRY principle and hunts for existing code snippets to save tokens.
+
 ### 🕵️ `@market-researcher` (Product Strategist)
 Scours developer forums and internet communities for validated pain points before you write a single line of code.
 
