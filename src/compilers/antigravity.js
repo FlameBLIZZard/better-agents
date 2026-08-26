@@ -8,7 +8,13 @@ async function compileAntigravity(selectedFiles, targetDir) {
 
   for (const relPath of selectedFiles) {
     const srcPath = path.join(sourceBase, relPath);
-    const destPath = path.join(destBase, relPath);
+    let destPath = path.join(destBase, relPath);
+    
+    // Antigravity natively discovers rules and skills.
+    // Subagents and workflows must be mapped into rules to be discovered.
+    if (relPath.startsWith('subagents/') || relPath.startsWith('workflows/')) {
+      destPath = path.join(destBase, 'rules', path.basename(relPath));
+    }
     
     if (fs.existsSync(srcPath)) {
       await fs.copy(srcPath, destPath);
