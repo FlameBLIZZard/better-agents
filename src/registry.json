@@ -38,6 +38,12 @@
   "skills/architecture_scaffolding": "Generates ASCII folder blueprints and enforces strict separation of concerns before scaffolding.",
   
   "workflows/app_clone.md": "The Project Manager. Manages a Kanban board and delegates tasks to clone an existing UI.",
+  "workflows/zero_to_saas_pipeline.md": "End-to-end orchestration from market research ideation to MVP execution.",
+  "workflows/launch_sequence.md": "Strict CI/CD gatekeeper. Audits security, containerizes, and tags GitHub releases.",
+  "workflows/legacy_refactor_team.md": "Surgical orchestration to modernize ancient codebases into decoupled architectures.",
+  "workflows/ruthless_clone.md": "Aggressive reconnaissance and cloning of a competitor's software or landing page.",
+  "workflows/pull_request_board.md": "Simulates a panel of pedantic senior engineers to audit every aspect of a commit.",
+  "workflows/incident_response.md": "Emergency triage protocol to isolate bugs and write post-mortems to the Knowledge Base.",
 
   "scripts/auto_formatter.js": "Runs Prettier automatically before the AI edits a file so it doesn't get confused by indentation.",
   "scripts/cost_tracker.js": "Intercepts the AI loop to print a silent receipt showing the estimated token cost of each step.",

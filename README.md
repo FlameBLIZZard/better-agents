@@ -80,6 +80,19 @@ Enforces strict UI/UX consistency, spacing constraints, and component styling st
 
 ---
 
+## 🏗️ Multi-Agent Workflows (Orchestration)
+
+Workflows are the highest level of abstraction. They simulate an entire company of AI employees working together to accomplish massive tasks.
+
+- 🏭 **The Zero-to-SaaS Pipeline**: Finds a market gap on Reddit, designs the wireframes, scaffolds the architecture, and builds the MVP.
+- 🚀 **The Launch Sequence**: A strict CI/CD gatekeeper. Audits security, containerizes the app, and tags GitHub releases.
+- 🕰️ **The Legacy Modernizer**: Maps ancient spaghetti code to modern Domain-Driven architectures and translates the UI.
+- 🥷 **The Ruthless Competitor Clone**: Aggressively analyzes a competitor's site and builds a superior version with custom SVG assets.
+- ⚖️ **The PR Review Board**: Simulates a pedantic panel of senior engineers to audit every aspect of your code before merging.
+- 🚑 **The Incident Response Team**: Isolates stack traces, applies hotfixes, and automatically writes post-mortems to your Knowledge Base.
+
+---
+
 ## 📦 What Else is in the Box?
 
 <details>
