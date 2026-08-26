@@ -6,6 +6,25 @@ const { compileAntigravity } = require('./compilers/antigravity');
 const { compileCursor } = require('./compilers/cursor');
 const { compileClaude } = require('./compilers/claude');
 
+// Helper to extract a brief description/hint from markdown or YAML
+function extractHint(filePath) {
+  try {
+    const content = fs.readFileSync(filePath, 'utf-8');
+    // Try to find a YAML description
+    const descMatch = content.match(/description:\s*(?:>-)?\s*([^\n]+)/i);
+    if (descMatch) return descMatch[1].trim().substring(0, 60) + '...';
+    
+    // Try to find a Role (for subagents)
+    const roleMatch = content.match(/\*\*Role:\*\*\s*([^\n]+)/i);
+    if (roleMatch) return 'Role: ' + roleMatch[1].trim();
+    
+    // Default to the first Markdown header
+    const firstLine = content.split('\n').find(l => l.startsWith('# '));
+    if (firstLine) return firstLine.replace('# ', '').trim();
+  } catch (e) {}
+  return '';
+}
+
 // Helper to dynamically read directories
 function getOptionsFromDir(dirRelPath, isDirectoryMode = false) {
   const fullPath = path.join(__dirname, '../.agents', dirRelPath);
@@ -19,9 +38,13 @@ function getOptionsFromDir(dirRelPath, isDirectoryMode = false) {
     const stat = fs.statSync(itemPath);
     
     if (isDirectoryMode && stat.isDirectory()) {
-      options.push({ value: path.posix.join(dirRelPath, item), label: item });
+      const skillMd = path.join(itemPath, 'SKILL.md');
+      let hint = '';
+      if (fs.existsSync(skillMd)) hint = extractHint(skillMd);
+      options.push({ value: path.posix.join(dirRelPath, item), label: item, hint });
     } else if (!isDirectoryMode && stat.isFile() && item.endsWith('.md')) {
-      options.push({ value: path.posix.join(dirRelPath, item), label: item.replace('.md', '') });
+      const hint = extractHint(itemPath);
+      options.push({ value: path.posix.join(dirRelPath, item), label: item.replace('.md', ''), hint });
     }
   }
   return options;
@@ -84,7 +107,7 @@ async function runCLI() {
   const hooks = await select({
     message: 'Install the "Time Machine" Auto-Save Hook?',
     options: [
-      { value: true, label: 'Yes (Recommended)' },
+      { value: true, label: 'Yes (Recommended)', hint: 'Silently commits changes to git so you can undo AI mistakes' },
       { value: false, label: 'No' }
     ]
   });
