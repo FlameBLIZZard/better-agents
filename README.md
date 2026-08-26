@@ -1,11 +1,11 @@
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=000000,444444&height=250&section=header&text=Better%20Agents&fontSize=80&fontColor=ffffff&animation=fadeIn&fontAlignY=30&desc=The%20Vibecoder's%20AI%20Toolkit&descAlignY=60&descAlign=50&descTheme=ffffff" alt="Better Agents Banner" />
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=000000&height=250&section=header&text=Better%20Agents&fontSize=80&fontColor=ffffff&animation=fadeIn&fontAlignY=30&desc=The%20Vibecoder's%20AI%20Toolkit&descAlignY=60&descAlign=50&descTheme=ffffff" alt="Better Agents Banner" />
 </p>
 
 <p align="center">
-  <a href="https://github.com/FlameBLIZZard/better-agents"><img src="https://img.shields.io/badge/Status-Actively%20Growing-success?style=for-the-badge&logo=github"></a>
-  <a href="#"><img src="https://img.shields.io/badge/Platform-Universal-blue?style=for-the-badge&logo=google"></a>
-  <a href="#"><img src="https://img.shields.io/badge/Vibe-Immaculate-ff69b4?style=for-the-badge&logo=sparkles"></a>
+  <a href="https://github.com/FlameBLIZZard/better-agents"><img src="https://img.shields.io/badge/Status-Actively%20Growing-111111?style=for-the-badge&logo=github"></a>
+  <a href="#"><img src="https://img.shields.io/badge/Platform-Universal-222222?style=for-the-badge&logo=google"></a>
+  <a href="#"><img src="https://img.shields.io/badge/Vibe-Immaculate-333333?style=for-the-badge&logo=sparkles"></a>
 </p>
 
 ## 📜 The Vibecoder Manifesto
