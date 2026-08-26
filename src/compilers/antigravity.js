@@ -3,7 +3,7 @@ const path = require('path');
 const pc = require('picocolors');
 
 async function compileAntigravity(selectedFiles, targetDir) {
-  const sourceBase = path.join(__dirname, '../.agents');
+  const sourceBase = path.join(__dirname, '../../.agents');
   const destBase = path.join(targetDir, '.agents');
 
   for (const relPath of selectedFiles) {

@@ -19,7 +19,7 @@ function getMarkdownFiles(itemPath, arrayOfFiles = []) {
 }
 
 async function compileCursor(selectedFiles, targetDir, targetName) {
-  const sourceBase = path.join(__dirname, '../.agents');
+  const sourceBase = path.join(__dirname, '../../.agents');
   const fileName = targetName === 'windsurf' ? '.windsurfrules' : '.cursorrules';
   const destFile = path.join(targetDir, fileName);
 
