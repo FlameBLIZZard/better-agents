@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=0f172a,c026d3&height=250&section=header&text=Better%20Agents&fontSize=80&fontColor=ffffff&animation=fadeIn&fontAlignY=35&desc=The%20Vibecoder's%20AI%20Toolkit&descAlignY=55&descAlign=50&descTheme=ffffff" alt="Better Agents Banner" />
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=0f172a,c026d3&height=250&section=header&text=Better%20Agents&fontSize=80&fontColor=ffffff&animation=fadeIn&fontAlignY=30&desc=The%20Vibecoder's%20AI%20Toolkit&descAlignY=60&descAlign=50&descTheme=ffffff" alt="Better Agents Banner" />
 </p>
 
 <p align="center">
