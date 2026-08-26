@@ -80,21 +80,6 @@ Enforces strict UI/UX consistency, spacing constraints, and component styling st
 
 ---
 
-<!-- STATS:START -->
-## 📊 The Arsenal (40 Modules & Counting)
-
-```mermaid
-pie title The Agentic Toolkit Breakdown
-    "Core Rules" : 16
-    "Advanced Skills" : 10
-    "Subagents" : 9
-    "Lifecycle Hooks" : 4
-    "Workflows" : 1
-```
-<!-- STATS:END -->
-
----
-
 ## 📦 What Else is in the Box?
 
 <details>
