@@ -13,11 +13,14 @@ Our toolkit currently includes the following rules and skills:
 4. **The Checkpoint Rule (`git_checkpoint.md`):** Forces the agent to auto-commit code (`git add . && git commit`) before attempting major refactors.
 5. **Artifact-First Output (`artifact_first.md`):** Prevents the agent from dumping long texts into chat, forcing it to save research and data as markdown files.
 6. **The 3-Option Ideation Rule (`three_option_ideation.md`):** Forbids the agent from making architectural decisions unilaterally; it must present 3 distinct options for you to choose from.
+7. **The Clean Desk Policy (`clean_desk_policy.md`):** Forces the agent to automatically delete temporary scratch files and debug scripts once a task is finished.
 
 ### 🛠️ Skills
 1. **Auto-Linter Loop (`auto_linter_loop`):** Teaches the agent to automatically run your project's linter in the background and fix syntax errors autonomously before asking for your review.
 2. **Devil's Advocate Planning (`devils_advocate_planning`):** When writing a complex plan, the agent spawns a background subagent to aggressively critique the plan for security flaws and edge cases.
 3. **Deep-Dive Competitor Analysis (`competitor_analysis`):** Spawns a market-research subagent to scour the web for competitors to your app idea and compiles a Markdown artifact detailing their weaknesses.
+4. **Red Team Pentester (`red_team_pentester`):** Spawns a security subagent to audit newly written backend code for SQL injection, XSS, and CSRF vulnerabilities.
+5. **Auto-Documenter (`auto_documenter`):** A workflow for iterating over un-documented files and injecting standardized JSDoc/Docstrings above all public functions and classes.
 
 ## 🚀 How to Install
 
