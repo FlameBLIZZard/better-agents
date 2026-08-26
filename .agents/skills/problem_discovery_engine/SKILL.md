@@ -1,5 +1,5 @@
 ---
-name: Problem Discovery Engine
+name: problem-discovery-engine
 description: Scrapes developer forums and social platforms to extract validated, real-world pain points for product ideation.
 ---
 

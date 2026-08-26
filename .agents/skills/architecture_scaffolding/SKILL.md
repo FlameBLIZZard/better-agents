@@ -1,5 +1,5 @@
 ---
-name: Architecture Scaffolding
+name: architecture-scaffolding
 description: Forces the AI to design and propose a strict ASCII directory structure before generating any project files.
 ---
 

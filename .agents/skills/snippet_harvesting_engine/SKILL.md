@@ -1,5 +1,5 @@
 ---
-name: Snippet Harvesting Engine
+name: snippet-harvesting-engine
 description: Instructs the AI to execute aggressive codebase searches to harvest and reuse existing logic, drastically reducing output tokens.
 ---
 

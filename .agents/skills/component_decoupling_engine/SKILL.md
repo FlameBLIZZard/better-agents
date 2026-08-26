@@ -1,5 +1,5 @@
 ---
-name: Component Decoupling Engine
+name: component-decoupling-engine
 description: Enforces the Single Responsibility Principle by breaking massive, monolithic files into pure, modular, and composable functions.
 ---
 

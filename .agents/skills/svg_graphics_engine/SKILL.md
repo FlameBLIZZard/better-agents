@@ -1,5 +1,5 @@
 ---
-name: SVG Graphics Engine
+name: svg-graphics-engine
 description: Empowers the AI to mathematically plot and generate highly optimized, raw SVG XML for icons, logos, and animations.
 ---
 
