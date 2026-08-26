@@ -63,6 +63,9 @@ Analyzes stack traces and applies targeted patches without conversational overhe
 ### 🏗️ `@system-architect` (Infrastructure Lead)
 Designs and scaffolds highly scalable, strictly boundaried folder hierarchies.
 
+### ✂️ `@refactoring-specialist` (Staff Engineer)
+Ruthlessly breaks down massive files to enforce the Single Responsibility Principle.
+
 ### 🕵️ `@market-researcher` (Product Strategist)
 Scours developer forums and internet communities for validated pain points before you write a single line of code.
 
