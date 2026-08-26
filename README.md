@@ -106,15 +106,13 @@ Invisible scripts that run automatically behind the scenes at specific agent lif
 
 ## 🚀 How to Install
 
-Antigravity natively supports discovering modular rules and skills placed in the `.agents/` directory.
+You don't need to manually clone or copy any folders! Just run our Universal CLI Installer directly from your terminal:
 
-### 1. Global Installation (Recommended)
-To apply these rules and skills to **all** projects on your machine, copy the `.agents/` folder to your global config:
-- **Windows:** Copy into `C:\Users\<YourUser>\.gemini\config\`
-- **Mac/Linux:** Copy into `~/.gemini/config/`
+```bash
+npx github:FlameBLIZZard/better-agents
+```
 
-### 2. Project-Specific Installation
-To apply these to a single project, simply drop the `.agents/` folder into the root of your project directory. 
+The stunning interactive wizard will ask you exactly which AI Assistant you are using (Cursor, Claude, or Antigravity) and magically compile all the selected rules directly into your project.
 
 ---
 
