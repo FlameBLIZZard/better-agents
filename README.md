@@ -92,7 +92,7 @@ Invisible scripts that run automatically behind the scenes at specific agent lif
 <summary><b>Click to expand available Hooks</b></summary>
 <br>
 
-- ⏱️ **The "Time Machine" Auto-Save (`hooks.json`)**: An invisible background script (`time_machine.sh`) that silently commits your code to Git after *every single AI step*. If the AI ever ruins your project, you can instantly hit undo and roll back to exactly how the code looked 5 minutes ago.
+- ⏱️ **The "Time Machine" Auto-Save (`hooks.json`)**: An invisible background Node.js script (`time_machine.js`) that silently commits your code to Git after *every single AI step*. If the AI ever ruins your project, you can instantly hit undo and roll back to exactly how the code looked 5 minutes ago.
 
 </details>
 
