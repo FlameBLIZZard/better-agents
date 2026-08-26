@@ -11,9 +11,9 @@ function countFiles(dirPath) {
 }
 
 // Get counts
-const psychologyRules = countFiles(path.join(agentsDir, 'rules', 'motivation'));
-const subagents = countFiles(path.join(agentsDir, 'rules', 'subagents'));
-const coreRules = countFiles(path.join(agentsDir, 'rules')) - psychologyRules - subagents; // Files directly in rules/
+const psychologyRules = countFiles(path.join(agentsDir, 'motivation'));
+const subagents = countFiles(path.join(agentsDir, 'subagents'));
+const coreRules = countFiles(path.join(agentsDir, 'rules')); // Now rules/ only has core rules
 const skills = fs.readdirSync(path.join(agentsDir, 'skills')).length; // Counting folders in skills
 const workflows = countFiles(path.join(agentsDir, 'workflows'));
 const hooks = countFiles(path.join(agentsDir, 'scripts')) + 1; // +1 for hooks.json

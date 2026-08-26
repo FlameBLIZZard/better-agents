@@ -72,11 +72,11 @@ QA agent that strictly reviews frontend code for padding, styling, and UI consis
 ---
 
 <!-- STATS:START -->
-## 📊 The Arsenal (23 Modules & Counting)
+## 📊 The Arsenal (33 Modules & Counting)
 
 ```mermaid
 pie title The Agentic Toolkit Breakdown
-    "Core Rules" : 1
+    "Core Rules" : 11
     "Advanced Skills" : 7
     "Subagents" : 6
     "Psychology Rules" : 4
