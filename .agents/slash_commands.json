@@ -1,0 +1,69 @@
+{
+  "/ba-skills": {
+    "file": "rules/skill_inventory_manager.md",
+    "description": "Lists all installed skills and workflows."
+  },
+  
+  "/ba-prototype": {
+    "file": "subagents/concept_artist.md",
+    "description": "Invokes the UI/UX Prototyper to generate wireframes."
+  },
+  "/ba-architect": {
+    "file": "subagents/system_architect.md",
+    "description": "Invokes the Infrastructure Lead to discuss folder structures."
+  },
+  "/ba-qa": {
+    "file": "subagents/ui_qa_engineer.md",
+    "description": "Invokes the Frontend QA to audit UI consistency."
+  },
+  "/ba-vector": {
+    "file": "subagents/vector_artist.md",
+    "description": "Invokes the Vector Graphics Engineer to draw an SVG."
+  },
+  
+  "/ba-document": {
+    "file": "skills/auto_documenter",
+    "description": "Runs the auto-documenter skill across your codebase."
+  },
+  "/ba-lint": {
+    "file": "skills/auto_linter_loop",
+    "description": "Runs the auto-linter loop to fix syntax errors."
+  },
+  "/ba-pentest": {
+    "file": "skills/red_team_pentester",
+    "description": "Simulates a cyberattack to find vulnerabilities."
+  },
+  "/ba-scaffold": {
+    "file": "skills/architecture_scaffolding",
+    "description": "Generates a strict ASCII folder blueprint before creating files."
+  },
+  "/ba-svg": {
+    "file": "skills/svg_graphics_engine",
+    "description": "Generates mathematical SVG code."
+  },
+  
+  "/ba-saas": {
+    "file": "workflows/product_lifecycle_orchestrator.md",
+    "description": "Executes the end-to-end Zero-to-SaaS pipeline."
+  },
+  "/ba-launch": {
+    "file": "workflows/deployment_gatekeeper_pipeline.md",
+    "description": "Executes the strict deployment gatekeeper pipeline."
+  },
+  "/ba-refactor": {
+    "file": "workflows/legacy_modernization_protocol.md",
+    "description": "Executes the legacy codebase modernization protocol."
+  },
+  "/ba-clone": {
+    "file": "workflows/market_parity_replicator.md",
+    "description": "Aggressively clones a competitor's architecture."
+  },
+  "/ba-review": {
+    "file": "workflows/automated_code_review_matrix.md",
+    "description": "Executes a pedantic PR review."
+  },
+  "/ba-incident": {
+    "file": "workflows/incident_response_protocol.md",
+    "description": "Executes the emergency bug triage protocol."
+  }
+}

@@ -72,12 +72,37 @@ async function runCLI() {
   const skills = getOptionsFromDir('skills', true);
   if (skills.length > 0) {
     const res = await multiselect({
-      message: 'Select Skills & Workflows:',
+      message: 'Select Skills:',
       options: skills,
       required: false
     });
     if (isCancel(res)) { cancel('Operation cancelled.'); process.exit(0); }
     selectedFiles.push(...res);
+  }
+
+  // 4b. Workflows
+  const workflows = getOptionsFromDir('workflows');
+  if (workflows.length > 0) {
+    const res = await multiselect({
+      message: 'Select Multi-Agent Workflows:',
+      options: workflows,
+      required: false
+    });
+    if (isCancel(res)) { cancel('Operation cancelled.'); process.exit(0); }
+    selectedFiles.push(...res);
+  }
+
+  // 4c. Slash Commands
+  const enableSlashCommands = await select({
+    message: 'Install the Slash Command Router? (Allows you to type /ba-launch instead of natural language)',
+    options: [
+      { value: true, label: 'Yes' },
+      { value: false, label: 'No' }
+    ]
+  });
+  if (isCancel(enableSlashCommands)) { cancel('Operation cancelled.'); process.exit(0); }
+  if (enableSlashCommands) {
+    selectedFiles.push('slash_commands.json');
   }
 
   // 5. Hooks
