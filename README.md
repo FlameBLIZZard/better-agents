@@ -97,6 +97,9 @@ Workflows are the highest level of abstraction. They simulate an entire company 
 - ⚖️ **Automated Code Review Matrix**: Simulates a pedantic panel of senior engineers to audit architecture and logic edge-cases before merging.
 - 🚑 **Incident Response Protocol**: Isolates stack traces, applies targeted patches, and automatically writes post-mortems to your Knowledge Base.
 - 🧹 **Tech Debt Eradicator**: Triggers the Code Librarian and Staff Engineer to harvest duplicate code and surgically decouple bloated components.
+- 🎨 **Design System Extractor**: Extracts arbitrary CSS and inline styles into a strict, unified design system.
+- 🛡️ **Zero-Day Vulnerability Response**: Purely defensive security pipeline that audits exploits, applies silent patches, and writes incident reports.
+- 🤝 **Open-Source Contributor**: Maps massive open-source repos and acts as a chameleon to perfectly clone their internal style for PRs.
 
 ---
 
