@@ -19,6 +19,7 @@ Why write code when you can Direct? This specialized cast of AI subagents is des
 | Subagent | Role | Description |
 |:---|:---|:---|
 | 🎨 **`@concept-artist`** | Mockup Generator | Generates 3 visual UI concepts before a single line of code is written. |
+| 🪄 **`@readme-wizard`** | Open Source Marketer | Writes world-class, visually stunning READMEs with dynamic banners and badges. |
 | 🧠 **`@vibe-translator`** | Technical Producer | Translates abstract aesthetic ideas (e.g., "cyberpunk cafe") into strict technical specs. |
 | 🚀 **`@autopilot`** | Head Developer | Takes a spec and silently grinds in the background to build the entire MVP. |
 | 🧽 **`@silent-fixer`** | Bug Janitor | Paste a stack trace, and it patches the code without explaining anything. *"Fixed. Refresh."* |
@@ -42,6 +43,7 @@ Enforce best practices and protect your context window natively.
 - 🛤️ **The 3-Option Ideation (`three_option_ideation.md`)**: Forbids unilateral decisions; the agent must present 3 distinct choices.
 - 🧹 **Clean Desk Policy (`clean_desk_policy.md`)**: Automatically deletes temporary scratch files once a task is finished.
 - 🗂️ **Skill Inventory Manager (`skill_inventory_manager.md`)**: Scans and lists all your installed skills in a clean table on demand.
+- 🚀 **GitHub Publish Ready (`github_publish_ready.md`)**: Stops you from blindly pushing code and recommends an open-source audit first.
 
 </details>
 
@@ -60,6 +62,7 @@ Teach your agent complex, multi-step workflows.
 - 🕵️ **Competitor Analysis (`competitor_analysis`)**: Spawns a market-research subagent to scour the web for competitors and weaknesses.
 - 🛡️ **Red Team Pentester (`red_team_pentester`)**: Spawns a security subagent to audit backend code for SQLi, XSS, and CSRF.
 - 📝 **Auto-Documenter (`auto_documenter`)**: Iterates over files and injects standardized JSDoc/Docstrings above all public functions.
+- 🌐 **GitHub Publisher (`github_publisher`)**: A master workflow that hunts for exposed `.env` secrets, generates licenses, and spawns the `@readme-wizard`.
 
 </details>
 
