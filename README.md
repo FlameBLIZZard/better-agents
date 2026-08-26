@@ -44,6 +44,7 @@ Enforce best practices and protect your context window natively.
 - 🧹 **Clean Desk Policy (`clean_desk_policy.md`)**: Automatically deletes temporary scratch files once a task is finished.
 - 🗂️ **Skill Inventory Manager (`skill_inventory_manager.md`)**: Scans and lists all your installed skills in a clean table on demand.
 - 🚀 **GitHub Publish Ready (`github_publish_ready.md`)**: Stops you from blindly pushing code and recommends an open-source audit first.
+- 🐳 **Docker-First Deployment (`docker_first.md`)**: Prevents the agent from dumping raw Dockerfiles in chat, forcing it to actually test the build locally first.
 
 </details>
 
@@ -63,6 +64,7 @@ Teach your agent complex, multi-step workflows.
 - 🛡️ **Red Team Pentester (`red_team_pentester`)**: Spawns a security subagent to audit backend code for SQLi, XSS, and CSRF.
 - 📝 **Auto-Documenter (`auto_documenter`)**: Iterates over files and injects standardized JSDoc/Docstrings above all public functions.
 - 🌐 **GitHub Publisher (`github_publisher`)**: A master workflow that hunts for exposed `.env` secrets, generates licenses, and spawns the `@readme-wizard`.
+- 🐳 **Docker Workflow & Auto-Debugger (`docker_workflow`)**: Writes multi-stage Dockerfiles, runs the build, and autonomously loops to fix any build errors.
 
 </details>
 

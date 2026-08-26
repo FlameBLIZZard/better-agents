@@ -5,5 +5,21 @@
   "author": "FlameBLIZZard",
   "type": "antigravity-plugin",
   "rules_dir": ".agents/rules",
-  "skills_dir": ".agents/skills"
+  "skills_dir": ".agents/skills",
+  "rules": [
+    ".agents/rules/three_option_ideation.md",
+    ".agents/rules/clean_desk_policy.md",
+    ".agents/rules/skill_inventory_manager.md",
+    ".agents/rules/github_publish_ready.md",
+    ".agents/rules/docker_first.md"
+  ],
+  "skills": [
+    ".agents/skills/auto_linter_loop/SKILL.md",
+    ".agents/skills/competitor_analysis/SKILL.md",
+    ".agents/skills/devils_advocate_planning/SKILL.md",
+    ".agents/skills/red_team_pentester/SKILL.md",
+    ".agents/skills/auto_documenter/SKILL.md",
+    ".agents/skills/github_publisher/SKILL.md",
+    ".agents/skills/docker_workflow/SKILL.md"
+  ]
 }
