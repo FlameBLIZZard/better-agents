@@ -29,5 +29,9 @@
   "skills/github_publisher": "Hunts for exposed .env secrets, generates licenses, and writes your documentation.",
   "skills/red_team_pentester": "Spawns a security subagent to audit backend code for SQLi, XSS, and CSRF.",
   
-  "workflows/app_clone.md": "The Project Manager. Manages a Kanban board and delegates tasks to clone an existing UI."
+  "workflows/app_clone.md": "The Project Manager. Manages a Kanban board and delegates tasks to clone an existing UI.",
+
+  "scripts/auto_formatter.js": "Runs Prettier automatically before the AI edits a file so it doesn't get confused by indentation.",
+  "scripts/cost_tracker.js": "Intercepts the AI loop to print a silent receipt showing the estimated token cost of each step.",
+  "hooks.json": "The Time Machine. Silently commits your code to git after every AI step so you can easily undo mistakes."
 }

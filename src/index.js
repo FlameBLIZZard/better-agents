@@ -93,17 +93,24 @@ async function runCLI() {
   }
 
   // 5. Hooks
-  const hooks = await select({
-    message: 'Install the "Time Machine" Auto-Save Hook?',
-    options: [
-      { value: true, label: 'Yes (Recommended)', hint: 'Silently commits changes to git so you can undo AI mistakes' },
-      { value: false, label: 'No' }
-    ]
+  const availableHooks = [
+    { value: 'time-machine', label: 'Time Machine (Auto-Save)', hint: extractHint('hooks.json') }, // keep old hint fallback or use registry
+    { value: 'auto-formatter', label: 'Auto-Formatter (Prettier)', hint: extractHint('scripts/auto_formatter.js') },
+    { value: 'cost-tracker', label: 'Token Cost Tracker', hint: extractHint('scripts/cost_tracker.js') }
+  ];
+
+  const selectedHooks = await multiselect({
+    message: 'Install Invisible Lifecycle Hooks?',
+    options: availableHooks,
+    required: false
   });
-  if (isCancel(hooks)) { cancel('Operation cancelled.'); process.exit(0); }
-  if (hooks) {
-    selectedFiles.push('hooks.json');
-    selectedFiles.push('scripts/time_machine.js');
+  if (isCancel(selectedHooks)) { cancel('Operation cancelled.'); process.exit(0); }
+
+  if (selectedHooks.length > 0) {
+    selectedFiles.push('hooks.json'); // We will just copy the master hooks.json for simplicity
+    if (selectedHooks.includes('time-machine')) selectedFiles.push('scripts/time_machine.js');
+    if (selectedHooks.includes('auto-formatter')) selectedFiles.push('scripts/auto_formatter.js');
+    if (selectedHooks.includes('cost-tracker')) selectedFiles.push('scripts/cost_tracker.js');
   }
 
   if (selectedFiles.length === 0) {

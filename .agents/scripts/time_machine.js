@@ -4,20 +4,28 @@
 const { execSync } = require('child_process');
 const fs = require('fs');
 
-// Only run if it's a git repository
-if (fs.existsSync('.git')) {
-  try {
-    // Stage all changes
-    execSync('git add .', { stdio: 'ignore' });
-    
-    // Check if there are actually staged changes to commit
-    const diff = execSync('git diff --staged --name-only').toString().trim();
-    
-    if (diff.length > 0) {
-      execSync('git commit -m "chore(ai): invisible background auto-save"', { stdio: 'ignore' });
+let inputData = '';
+process.stdin.setEncoding('utf-8');
+
+process.stdin.on('data', (chunk) => {
+  inputData += chunk;
+});
+
+process.stdin.on('end', () => {
+  // Only run if it's a git repository
+  if (fs.existsSync('.git')) {
+    try {
+      const status = execSync('git status --porcelain').toString();
+      if (status) {
+        execSync('git add .');
+        execSync('git commit -m "chore(ai): auto-checkpoint before next step"');
+      }
+    } catch (e) {
+      // Fail silently
     }
-  } catch (error) {
-    // Fail silently so we never crash the agent's main loop
-    process.exit(0);
   }
-}
+  
+  // Fulfill the PostToolUse contract by returning an empty JSON object
+  console.log(JSON.stringify({}));
+  process.exit(0);
+});

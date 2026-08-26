@@ -1,9 +1,39 @@
 {
-  "post_step": [
-    {
-      "name": "The Time Machine",
-      "command": "node .agents/scripts/time_machine.js",
-      "description": "Runs invisibly after every AI action to silently commit file changes, allowing the user to undo bad AI code easily."
-    }
-  ]
+  "time-machine": {
+    "PostToolUse": [
+      {
+        "matcher": "*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node .agents/scripts/time_machine.js",
+            "timeout": 15
+          }
+        ]
+      }
+    ]
+  },
+  "auto-formatter": {
+    "PreToolUse": [
+      {
+        "matcher": "replace_file_content|write_to_file",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node .agents/scripts/auto_formatter.js",
+            "timeout": 15
+          }
+        ]
+      }
+    ]
+  },
+  "cost-tracker": {
+    "PostInvocation": [
+      {
+        "type": "command",
+        "command": "node .agents/scripts/cost_tracker.js",
+        "timeout": 10
+      }
+    ]
+  }
 }
