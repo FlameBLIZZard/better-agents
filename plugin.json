@@ -1,0 +1,9 @@
+{
+  "name": "better-agents",
+  "version": "1.0.0",
+  "description": "The Vibecoder's AI Toolkit. An ever-growing collection of optimized rules, skills, and subagents.",
+  "author": "FlameBLIZZard",
+  "type": "antigravity-plugin",
+  "rules_dir": ".agents/rules",
+  "skills_dir": ".agents/skills"
+}
