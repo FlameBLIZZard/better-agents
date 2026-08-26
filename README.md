@@ -96,6 +96,7 @@ Workflows are the highest level of abstraction. They simulate an entire company 
 - 🥷 **Market Parity Replicator**: Aggressively analyzes a competitor's architecture and builds a superior version with custom SVG assets.
 - ⚖️ **Automated Code Review Matrix**: Simulates a pedantic panel of senior engineers to audit architecture and logic edge-cases before merging.
 - 🚑 **Incident Response Protocol**: Isolates stack traces, applies targeted patches, and automatically writes post-mortems to your Knowledge Base.
+- 🧹 **Tech Debt Eradicator**: Triggers the Code Librarian and Staff Engineer to harvest duplicate code and surgically decouple bloated components.
 
 ---
 

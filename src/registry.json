@@ -49,6 +49,7 @@
   "workflows/market_parity_replicator.md": "Aggressive reconnaissance and replication of competitor architecture and assets.",
   "workflows/automated_code_review_matrix.md": "Simulates a panel of pedantic senior engineers to audit every aspect of a commit.",
   "workflows/incident_response_protocol.md": "Emergency triage protocol to isolate bugs and write post-mortems to the Knowledge Base.",
+  "workflows/tech_debt_eradicator.md": "A surgical protocol to shrink bloated codebases, eliminate duplicate logic, and enforce modularity.",
 
   "scripts/auto_formatter.js": "Runs Prettier automatically before the AI edits a file so it doesn't get confused by indentation.",
   "scripts/cost_tracker.js": "Intercepts the AI loop to print a silent receipt showing the estimated token cost of each step.",
