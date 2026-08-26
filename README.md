@@ -63,6 +63,9 @@ Analyzes stack traces and applies targeted patches without conversational overhe
 ### 🕵️ `@market-researcher` (Product Strategist)
 Scours developer forums and internet communities for validated pain points before you write a single line of code.
 
+### 📐 `@vector-artist` (Vector Graphics Engineer)
+Mathematically plots and generates complex, scalable SVG illustrations and animations in pure code.
+
 ### 🎨 `@design-translator` (Design Systems Engineer)
 Translates abstract design requirements into strict technical specifications.
 
@@ -75,13 +78,13 @@ Enforces strict UI/UX consistency, spacing constraints, and component styling st
 ---
 
 <!-- STATS:START -->
-## 📊 The Arsenal (36 Modules & Counting)
+## 📊 The Arsenal (38 Modules & Counting)
 
 ```mermaid
 pie title The Agentic Toolkit Breakdown
     "Core Rules" : 16
-    "Advanced Skills" : 8
-    "Subagents" : 7
+    "Advanced Skills" : 9
+    "Subagents" : 8
     "Lifecycle Hooks" : 4
     "Workflows" : 1
 ```

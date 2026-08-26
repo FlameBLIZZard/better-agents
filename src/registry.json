@@ -23,6 +23,7 @@
   "subagents/documentation_engineer.md": "Documentation Engineer. Synthesizes codebase context into comprehensive, production-ready documentation.",
   "subagents/ui_qa_engineer.md": "Frontend QA. Enforces strict UI/UX consistency, spacing constraints, and component styling standards.",
   "subagents/market_researcher.md": "Product Strategist. Scours the internet for validated pain points before you write a single line of code.",
+  "subagents/vector_artist.md": "Vector Graphics Engineer. Mathematically plots and generates raw SVG illustrations and animations.",
   
   "skills/auto_documenter": "Iterates over files and injects standardized JSDoc/Docstrings above all public functions.",
   "skills/auto_linter_loop": "Runs your linter in the background and autonomously fixes syntax errors.",
@@ -32,6 +33,7 @@
   "skills/github_publisher": "Automates the entire open-source release cycle (tags, releases, semantic versioning).",
   "skills/red_team_pentester": "Simulates a cyberattack against your local codebase and generates a vulnerability report.",
   "skills/problem_discovery_engine": "Scrapes developer forums to extract validated, real-world pain points for product ideation.",
+  "skills/svg_graphics_engine": "Empowers the AI to mathematically plot and generate highly optimized, raw SVG XML.",
   
   "workflows/app_clone.md": "The Project Manager. Manages a Kanban board and delegates tasks to clone an existing UI.",
 
