@@ -1,6 +1,6 @@
 # Contributing to Better Agents 🚀
 
-Welcome to the ultimate open-source marketplace for AI Agents! We want to build the largest, highest-quality collection of custom rules, subagents, and skills for Vibecoders. 
+Welcome to the ultimate open-source marketplace for AI Agents! We want to build the largest, highest-quality collection of custom rules, subagents, and skills for AI-Assisted Developers. 
 
 Whether you've invented a hilarious Motivation Rule or a hyper-advanced Next.js Auto-Linter, we want it!
 
@@ -29,8 +29,8 @@ Want to add the files yourself? Perfect.
 ---
 
 ### Core Philosophy
-- **Vibecoding First**: We prioritize aesthetic, fun, and highly automated workflows.
+- **Agentic Workflows First**: We prioritize robust, predictable, and highly automated workflows.
 - **Zero Filler**: Write prompts that forbid the AI from being overly conversational.
 - **Modularity**: Don't put 5 different ideas into one file. Break them up so users can selectively install them via the CLI.
 
-Happy contributing! 🎮
+Happy coding! 🎮

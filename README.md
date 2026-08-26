@@ -1,18 +1,18 @@
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=000000&height=250&section=header&text=Better%20Agents&fontSize=80&fontColor=ffffff&animation=fadeIn&fontAlignY=30&desc=The%20Vibecoder's%20AI%20Toolkit&descAlignY=60&descAlign=50&descTheme=ffffff" alt="Better Agents Banner" />
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=000000&height=250&section=header&text=Better%20Agents&fontSize=80&fontColor=ffffff&animation=fadeIn&fontAlignY=30&desc=The%20Ultimate%20AI%20Agent%20Toolkit&descAlignY=60&descAlign=50&descTheme=ffffff" alt="Better Agents Banner" />
 </p>
 
 <p align="center">
   <a href="https://github.com/FlameBLIZZard/better-agents"><img src="https://img.shields.io/badge/Status-Actively%20Growing-111111?style=for-the-badge&logo=github"></a>
   <a href="#"><img src="https://img.shields.io/badge/Platform-Universal-222222?style=for-the-badge&logo=google"></a>
-  <a href="#"><img src="https://img.shields.io/badge/Vibe-Immaculate-333333?style=for-the-badge&logo=sparkles"></a>
+  <a href="#"><img src="https://img.shields.io/badge/Agent-Autonomous-333333?style=for-the-badge&logo=sparkles"></a>
 </p>
 
-## 📜 The Vibecoder Manifesto
+## 📜 The Agentic Manifesto
 
 > Stop treating your AI like a glorified search engine. Treat it like a **Production Studio**.
 
-*Better Agents* transforms your workspace into an autonomous ecosystem where you act as the **Creative Director**, and the AI handles the boilerplate. 
+*Better Agents* transforms your workspace into an autonomous ecosystem where you act as the **Creative Director**, and the AI handles the boilerplate. This is an ever-growing, limitless collection of modular rules, psychology-driven motivation loops, and autonomous subagents natively designed to protect your context window and maximize autonomous coding.
 
 <p align="center">
   <img src="./assets/flowchart.svg?v=2" alt="Architecture Flowchart" width="800">
@@ -25,7 +25,7 @@
 You don't need to manually clone or copy any folders! Just run our stunning interactive CLI directly from your terminal:
 
 <p align="center">
-  <img src="./assets/terminal.svg?v=3" alt="CLI Terminal Animation" width="800">
+  <img src="./assets/terminal.svg?v=4" alt="CLI Terminal Animation" width="800">
 </p>
 
 ```bash
@@ -38,7 +38,7 @@ The wizard will magically compile your selected rules directly into your project
 
 ## 🆚 The Showdown: Normal AI vs. Better Agents
 
-| ❌ Normal Agent (The Pain) | ✨ Better Agents (The Vibe) |
+| ❌ Normal Agent (The Pain) | ✨ Better Agents (The Solution) |
 | :--- | :--- |
 | **Apologizes endlessly** and dumps 400 lines of unformatted code into the chat. | **Stays silent**, auto-formats the code in the background, and just says *"Done."* |
 | **Overwrites your working code** and breaks the app. | Uses the **"Time Machine"** hook to silently commit to Git *before* editing. |
@@ -47,14 +47,14 @@ The wizard will magically compile your selected rules directly into your project
 
 ---
 
-## 🌟 The Vibecoder Production Studio
+## 🌟 The Agentic Production Studio
 
 Why write code when you can direct? Meet your new specialized cast of AI subagents. 
 
 ### 🎨 `@concept-artist` (The Mockup Generator)
 Generates 3 visual UI concepts before a single line of code is written.
 
-### 🧠 `@vibe-translator` (The Technical Producer)
+### 🧠 `@spec-translator` (The Technical Producer)
 Translates abstract aesthetic ideas (e.g., "cyberpunk cafe") into strict technical React/Tailwind specs.
 
 ### 🚀 `@autopilot` (The Head Developer)
@@ -66,8 +66,8 @@ Paste a stack trace, and it patches the code without explaining anything. *"Fixe
 ### 🪄 `@readme-wizard` (The Open Source Marketer)
 Writes world-class, visually stunning READMEs with dynamic banners and shields.io badges.
 
-### ✨ `@vibe-check` (The Art Critic)
-QA agent that strictly reviews frontend code for padding, styling, and aesthetic vibes.
+### ✨ `@quality-check` (The Art Critic)
+QA agent that strictly reviews frontend code for padding, styling, and UI consistency.
 
 ---
 
@@ -111,7 +111,7 @@ QA agent that strictly reviews frontend code for padding, styling, and aesthetic
 
 ## 🌍 The Marketplace (Community Hub)
 
-`better-agents` isn't just a toolkit; it's a global marketplace for Vibecoders to share their most powerful AI prompts.
+`better-agents` isn't just a toolkit; it's a global marketplace for developers to share their most powerful AI prompts.
 
 Want to add your own custom `@seo-expert` subagent or an automated `database_migrator` skill? 
 It is incredibly easy to contribute:
@@ -128,7 +128,7 @@ Once merged, your agent will instantly become available to thousands of develope
 
 ## 💎 Contributors Wall
 
-A massive shoutout to the vibecoders building the marketplace!
+A massive shoutout to the developers building the marketplace!
 
 <a href="https://github.com/FlameBLIZZard/better-agents/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=FlameBLIZZard/better-agents" />

@@ -69,7 +69,7 @@
       <text x="20" y="250" fill="#666666">│</text>
       <text x="20" y="270" fill="#dddddd">✔  Successfully installed customized modules.</text>
       <text x="20" y="290" fill="#666666">│</text>
-      <text x="20" y="310" fill="#dddddd">└  You are all set! Happy Vibecoding.</text>
+      <text x="20" y="310" fill="#dddddd">└  You are all set! Happy Coding.</text>
       
       <!-- Final Prompt return -->
       <text x="20" y="350" fill="#888888">➜</text>

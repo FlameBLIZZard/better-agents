@@ -145,7 +145,7 @@ async function runCLI() {
     }
     
     s.stop('Compilation complete!');
-    outro(pc.green('You are all set! Happy Vibecoding.'));
+    outro(pc.green('You are all set! Happy Coding.'));
   } catch (error) {
     s.stop(pc.red('Compilation failed.'));
     console.error(error);

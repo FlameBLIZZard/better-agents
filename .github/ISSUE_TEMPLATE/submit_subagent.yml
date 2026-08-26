@@ -1,12 +1,12 @@
 name: 🤖 Submit a New Subagent
-description: Propose a new AI persona or role to be added to the Vibecoder Studio.
+description: Propose a new AI persona or role to be added to the Agentic Production Studio.
 title: "[Agent]: <Name of Subagent>"
 labels: ["enhancement", "subagent"]
 body:
   - type: markdown
     attributes:
       value: |
-        Thanks for contributing to the `better-agents` Marketplace! Subagents are highly specialized personas that handle specific tasks for vibecoders.
+        Thanks for contributing to the `better-agents` Marketplace! Subagents are highly specialized personas that handle specific tasks for developers.
   - type: input
     id: agent_name
     attributes:
