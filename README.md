@@ -1,47 +1,85 @@
-# Better Agents
+<p align="center">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=timeGradient&height=250&section=header&text=Better%20Agents&fontSize=80&animation=fadeIn&fontAlignY=35&desc=The%20Vibecoder's%20AI%20Toolkit&descAlignY=55&descAlign=50" alt="Better Agents Banner" />
+</p>
 
-An ever-growing, limitless collection of optimized, modular rules and skills for Antigravity AI agents. This repository is continuously evolving to make agents more efficient, thorough, and user-friendly.
+<p align="center">
+  <a href="https://github.com/FlameBLIZZard/better-agents"><img src="https://img.shields.io/badge/Status-Actively%20Growing-success?style=for-the-badge&logo=github"></a>
+  <a href="#"><img src="https://img.shields.io/badge/Platform-Antigravity%20AI-blue?style=for-the-badge&logo=google"></a>
+  <a href="#"><img src="https://img.shields.io/badge/Vibe-Immaculate-ff69b4?style=for-the-badge&logo=sparkles"></a>
+</p>
 
-## 🌟 Current Features
+> An ever-growing, limitless collection of optimized, modular rules, skills, and subagents for Antigravity AI. Drop these into your workspace to transform your agent from a generic assistant into a 10x vibecoding studio.
 
-Our toolkit currently includes the following rules, skills, and subagents:
+---
 
-### 🤖 Subagents (The Vibecoder Production Studio)
-A specialized cast of AI subagents designed for "vibecoding"—where you act as the Creative Director and the AI writes the code. Defined in `vibecoder_subagents.md`.
-1. **`@vibe-translator`**: Translates abstract aesthetic ideas (e.g., "cyberpunk coffee shop") into strict technical specs for coding agents.
-2. **`@autopilot`**: The autonomous developer that takes a spec and silently grinds in the background to build the entire MVP without asking questions.
-3. **`@silent-fixer`**: Paste a stack trace, and it patches the code without explaining anything. It just says "Fixed. Refresh."
-4. **`@concept-artist`**: Uses AI image generation to visually mock up 3 UI concepts for you to choose from before any code is written.
-5. **`@vibe-check`**: A QA agent that strictly reviews generated frontend code for aesthetic quality, padding, and styling consistency.
+## 🌟 The Vibecoder Production Studio (Subagents)
 
-### 📜 Rules
-1. **Interactive Planning (`project_alignment.md`):** Forces the agent to pause and interview you (`/grill-me`) before scaffolding new projects.
-2. **Beginner-Friendly Documentation (`beginner_documentation.md`):** Automatically generates a `PROJECT_TOUR.md` for new projects using simple analogies.
-3. **Strict Token Conservation (`token_conservation.md`):** Strips out AI conversational filler and forces targeted file edits.
-4. **The Checkpoint Rule (`git_checkpoint.md`):** Forces the agent to auto-commit code (`git add . && git commit`) before attempting major refactors.
-5. **Artifact-First Output (`artifact_first.md`):** Prevents the agent from dumping long texts into chat, forcing it to save research and data as markdown files.
-6. **The 3-Option Ideation Rule (`three_option_ideation.md`):** Forbids the agent from making architectural decisions unilaterally; it must present 3 distinct options for you to choose from.
-7. **The Clean Desk Policy (`clean_desk_policy.md`):** Forces the agent to automatically delete temporary scratch files and debug scripts once a task is finished.
-8. **Skill Inventory Manager (`skill_inventory_manager.md`):** Teaches the agent to automatically scan and list all your installed skills in a clean table whenever you ask what capabilities you have.
+Why write code when you can Direct? This specialized cast of AI subagents is designed for **vibecoding**, where you act as the Creative Director and the AI handles the boilerplate.
 
-### 🛠️ Skills
-1. **Auto-Linter Loop (`auto_linter_loop`):** Teaches the agent to automatically run your project's linter in the background and fix syntax errors autonomously before asking for your review.
-2. **Devil's Advocate Planning (`devils_advocate_planning`):** When writing a complex plan, the agent spawns a background subagent to aggressively critique the plan for security flaws and edge cases.
-3. **Deep-Dive Competitor Analysis (`competitor_analysis`):** Spawns a market-research subagent to scour the web for competitors to your app idea and compiles a Markdown artifact detailing their weaknesses.
-4. **Red Team Pentester (`red_team_pentester`):** Spawns a security subagent to audit newly written backend code for SQL injection, XSS, and CSRF vulnerabilities.
-5. **Auto-Documenter (`auto_documenter`):** A workflow for iterating over un-documented files and injecting standardized JSDoc/Docstrings above all public functions and classes.
+| Subagent | Role | Description |
+|:---|:---|:---|
+| 🎨 **`@concept-artist`** | Mockup Generator | Generates 3 visual UI concepts before a single line of code is written. |
+| 🧠 **`@vibe-translator`** | Technical Producer | Translates abstract aesthetic ideas (e.g., "cyberpunk cafe") into strict technical specs. |
+| 🚀 **`@autopilot`** | Head Developer | Takes a spec and silently grinds in the background to build the entire MVP. |
+| 🧽 **`@silent-fixer`** | Bug Janitor | Paste a stack trace, and it patches the code without explaining anything. *"Fixed. Refresh."* |
+| ✨ **`@vibe-check`** | Art Critic | QA agent that strictly reviews frontend code for padding, styling, and aesthetic vibes. |
+
+---
+
+## 📜 Core Rules
+
+Enforce best practices and protect your context window natively.
+
+<details>
+<summary><b>Click to expand available Rules</b></summary>
+<br>
+
+- 🗣️ **Interactive Planning (`project_alignment.md`)**: Forces the agent to interview you (`/grill-me`) before scaffolding.
+- 🎓 **Beginner Documentation (`beginner_documentation.md`)**: Auto-generates a simple `PROJECT_TOUR.md` using real-world analogies.
+- 📉 **Strict Token Conservation (`token_conservation.md`)**: Strips AI filler and forces targeted file edits to save context and money.
+- 💾 **The Checkpoint Rule (`git_checkpoint.md`)**: Auto-commits code (`git add . && git commit`) before major refactors.
+- 📄 **Artifact-First Output (`artifact_first.md`)**: Prevents long text dumps in chat by saving data as markdown artifacts.
+- 🛤️ **The 3-Option Ideation (`three_option_ideation.md`)**: Forbids unilateral decisions; the agent must present 3 distinct choices.
+- 🧹 **Clean Desk Policy (`clean_desk_policy.md`)**: Automatically deletes temporary scratch files once a task is finished.
+- 🗂️ **Skill Inventory Manager (`skill_inventory_manager.md`)**: Scans and lists all your installed skills in a clean table on demand.
+
+</details>
+
+---
+
+## 🛠️ Advanced Skills
+
+Teach your agent complex, multi-step workflows.
+
+<details>
+<summary><b>Click to expand available Skills</b></summary>
+<br>
+
+- 🔄 **Auto-Linter Loop (`auto_linter_loop`)**: Runs your linter in the background and autonomously fixes syntax errors.
+- 😈 **Devil's Advocate Planning (`devils_advocate_planning`)**: Spawns a subagent to aggressively critique your plan for flaws.
+- 🕵️ **Competitor Analysis (`competitor_analysis`)**: Spawns a market-research subagent to scour the web for competitors and weaknesses.
+- 🛡️ **Red Team Pentester (`red_team_pentester`)**: Spawns a security subagent to audit backend code for SQLi, XSS, and CSRF.
+- 📝 **Auto-Documenter (`auto_documenter`)**: Iterates over files and injects standardized JSDoc/Docstrings above all public functions.
+
+</details>
+
+---
 
 ## 🚀 How to Install
 
 Antigravity natively supports discovering modular rules and skills placed in the `.agents/` directory.
 
 ### 1. Global Installation (Recommended)
-To apply these rules and skills to **all** projects on your machine, copy the `.agents/` folder to your global config directory:
-- **Windows:** Copy the `.agents/` folder into `C:\Users\<YourUser>\.gemini\config\`
-- **Mac/Linux:** Copy the `.agents/` folder into `~/.gemini/config/`
+To apply these rules and skills to **all** projects on your machine, copy the `.agents/` folder to your global config:
+- **Windows:** Copy into `C:\Users\<YourUser>\.gemini\config\`
+- **Mac/Linux:** Copy into `~/.gemini/config/`
 
 ### 2. Project-Specific Installation
-To apply these to a single project, simply copy the `.agents/` folder into the root of your project directory. The agent will automatically discover them when working in that project.
+To apply these to a single project, simply drop the `.agents/` folder into the root of your project directory. 
 
-## 🤝 Contributing
-Because this repository is constantly growing, feel free to contribute your own favorite rules and skills to help the community build better agents!
+---
+
+<p align="center">
+  <b>🤝 Contributing</b><br>
+  Because this repository is constantly growing, feel free to contribute your own favorite rules and skills to help the community build better agents!
+</p>
