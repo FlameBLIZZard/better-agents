@@ -8,11 +8,9 @@ const { compileClaude } = require('./compilers/claude');
 
 const registry = require('./registry.json');
 
-// Helper to extract a brief description/hint from registry.json
+// Helper to extract a brief description from registry.json
 function extractHint(relPath) {
-  const hintText = registry[relPath] || 'Custom module';
-  const repoUrl = `https://github.com/FlameBLIZZard/better-agents/blob/main/.agents/${relPath}`;
-  return `${hintText} (Docs: ${repoUrl})`;
+  return registry[relPath] || 'Custom module';
 }
 
 // Helper to dynamically read directories
@@ -95,7 +93,7 @@ async function runCLI(args = []) {
     const coreRules = getOptionsFromDir('rules');
     if (coreRules.length > 0) {
       const res = await multiselect({
-        message: 'Select Core Rules:',
+        message: 'Select Core Rules (Space to select, Enter to submit, Arrows to navigate):',
         options: coreRules,
         required: false
       });
@@ -107,7 +105,7 @@ async function runCLI(args = []) {
     const subagents = getOptionsFromDir('subagents');
     if (subagents.length > 0) {
       const res = await multiselect({
-        message: 'Select Subagents:',
+        message: 'Select Subagents (Space to select, Enter to submit, Arrows to navigate):',
         options: subagents,
         required: false
       });
@@ -119,7 +117,7 @@ async function runCLI(args = []) {
     const skills = getOptionsFromDir('skills', true);
     if (skills.length > 0) {
       const res = await multiselect({
-        message: 'Select Skills & Workflows:',
+        message: 'Select Skills & Workflows (Space to select, Enter to submit):',
         options: skills,
         required: false
       });
@@ -135,7 +133,7 @@ async function runCLI(args = []) {
     ];
 
     const selectedHooks = await multiselect({
-      message: 'Install Invisible Lifecycle Hooks?',
+      message: 'Install Invisible Lifecycle Hooks? (Space to select, Enter to submit):',
       options: availableHooks,
       required: false
     });
