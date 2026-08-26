@@ -6,7 +6,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "node .agents/scripts/time_machine.js",
+            "command": "node scripts/time_machine.js",
             "timeout": 15
           }
         ]
@@ -20,7 +20,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "node .agents/scripts/auto_formatter.js",
+            "command": "node scripts/auto_formatter.js",
             "timeout": 15
           }
         ]
@@ -31,7 +31,7 @@
     "PostInvocation": [
       {
         "type": "command",
-        "command": "node .agents/scripts/cost_tracker.js",
+        "command": "node scripts/cost_tracker.js",
         "timeout": 10
       }
     ]

@@ -12,13 +12,18 @@ process.stdin.on('data', (chunk) => {
 });
 
 process.stdin.on('end', () => {
+  let payload = {};
+  try { payload = JSON.parse(inputData); } catch (e) {}
+  const workspaceDir = (payload.workspacePaths && payload.workspacePaths.length > 0) ? payload.workspacePaths[0] : process.cwd();
+  
+  const gitDir = workspaceDir + '/.git';
   // Only run if it's a git repository
-  if (fs.existsSync('.git')) {
+  if (fs.existsSync(gitDir)) {
     try {
-      const status = execSync('git status --porcelain').toString();
+      const status = execSync('git status --porcelain', { cwd: workspaceDir }).toString();
       if (status) {
-        execSync('git add .');
-        execSync('git commit -m "chore(ai): auto-checkpoint before next step"');
+        execSync('git add .', { cwd: workspaceDir });
+        execSync('git commit -m "chore(ai): auto-checkpoint before next step"', { cwd: workspaceDir });
       }
     } catch (e) {
       // Fail silently

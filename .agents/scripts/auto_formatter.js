@@ -16,8 +16,10 @@ process.stdin.on('end', () => {
     const toolName = payload.toolCall?.name;
     if (toolName === 'write_to_file' || toolName === 'replace_file_content') {
       try {
+        const workspaceDir = (payload.workspacePaths && payload.workspacePaths.length > 0) ? payload.workspacePaths[0] : process.cwd();
         // Silently run prettier on the source folder before allowing the edit
         execSync('npx prettier --write "src/**/*.{js,ts,jsx,tsx,css,md}" --log-level silent', { 
+          cwd: workspaceDir,
           stdio: 'ignore',
           timeout: 10000 
         });
