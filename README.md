@@ -70,6 +70,20 @@ Teach your agent complex, multi-step workflows.
 
 ---
 
+## 🏗️ Orchestration Workflows
+
+Massive, multi-step agentic orchestrations that manage multiple subagents and maintain state.
+
+<details>
+<summary><b>Click to expand available Workflows</b></summary>
+<br>
+
+- 🎭 **The "App Clone" Orchestrator (`app_clone`)**: You provide a URL. The agent acts as a Project Manager, setting up a Kanban board artifact, spawning researchers to analyze the UI, and dispatching the `@autopilot` to build the app component-by-component.
+
+</details>
+
+---
+
 ## 🚀 How to Install
 
 Antigravity natively supports discovering modular rules and skills placed in the `.agents/` directory.

@@ -6,6 +6,7 @@
   "type": "antigravity-plugin",
   "rules_dir": ".agents/rules",
   "skills_dir": ".agents/skills",
+  "workflows_dir": ".agents/workflows",
   "rules": [
     ".agents/rules/three_option_ideation.md",
     ".agents/rules/clean_desk_policy.md",
