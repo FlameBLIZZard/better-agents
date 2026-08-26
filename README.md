@@ -15,7 +15,7 @@
 *Better Agents* transforms your workspace into an autonomous ecosystem where you act as the **Creative Director**, and the AI handles the boilerplate. 
 
 <p align="center">
-  <img src="./assets/flowchart.svg" alt="Architecture Flowchart" width="800">
+  <img src="./assets/flowchart.svg?v=2" alt="Architecture Flowchart" width="800">
 </p>
 
 ---
@@ -25,7 +25,7 @@
 You don't need to manually clone or copy any folders! Just run our stunning interactive CLI directly from your terminal:
 
 <p align="center">
-  <img src="./assets/terminal.svg" alt="CLI Terminal Animation" width="800">
+  <img src="./assets/terminal.svg?v=2" alt="CLI Terminal Animation" width="800">
 </p>
 
 ```bash
